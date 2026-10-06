@@ -1,0 +1,6 @@
+# 本地编译和解释器产物；实验结果与日志不在此忽略，便于保留真实证据。
+/server/build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
