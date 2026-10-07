@@ -1,0 +1,5 @@
+Compiled 51 Java scaffold files into C:\Users\Administrator\Documents\ChatGPT\103\work\b-implementation\server\build\classes
+Server scaffold OK: configuration, DTO classes and component wiring.
+UDP, codec, business, history and callbacks are NOT implemented; no port was bound.
+Client configuration and component wiring OK; no socket was opened.
+Use python -m unittest discover -s client/tests -v to verify behavior.

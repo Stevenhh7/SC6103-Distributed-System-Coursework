@@ -1,0 +1,51 @@
+PowerShell parser: PASS
+Case=baseline; mode=alo; seed=1001 seats=10 fare=100; write target=1193224b-cdc5-4559-8664-c0fdffdc461f:2
+Expected final seats=9 fare=140; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=baseline; mode=amo; seed=1001 seats=10 fare=100; write target=b6020e5c-3b02-4189-8c07-8a4f9dd48f6d:2
+Expected final seats=9 fare=140; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=request_loss_reserve; mode=alo; seed=1001 seats=10 fare=100; write target=4847b379-a505-49d1-b977-68a00959ca91:2
+Expected final seats=9 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=request_loss_reserve; mode=amo; seed=1001 seats=10 fare=100; write target=4f86d74f-b25e-494e-af37-ac29e3b4e4bc:2
+Expected final seats=9 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_reserve; mode=alo; seed=1001 seats=10 fare=100; write target=dcf3c7d8-8750-4732-bda2-b1a9e64879ac:2
+Expected final seats=8 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_reserve; mode=amo; seed=1001 seats=10 fare=100; write target=dbf63dfd-13f9-4b5d-82c7-828033e4dc15:2
+Expected final seats=9 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_increase; mode=alo; seed=1001 seats=10 fare=100; write target=8d576546-bf11-4c1b-b9a1-924d90ae521b:2
+Expected final seats=10 fare=140; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_increase; mode=amo; seed=1001 seats=10 fare=100; write target=b879f966-5dca-44c4-bfa3-0359e1d6b266:2
+Expected final seats=10 fare=120; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_set; mode=alo; seed=1001 seats=10 fare=100; write target=e8c01623-4e7f-4415-ba71-b55baf27b28e:2
+Expected final seats=10 fare=120; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=reply_loss_set; mode=amo; seed=1001 seats=10 fare=100; write target=944768b8-d342-4882-a4fd-5879b156fead:2
+Expected final seats=10 fare=120; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=all_request_loss; mode=alo; seed=1001 seats=10 fare=100; write target=355414f8-742d-4a90-a439-04e05f8a06c0:2
+Expected final seats=10 fare=100; unknown=True
+DRY RUN: no processes, sockets or result records were created.
+Case=all_request_loss; mode=amo; seed=1001 seats=10 fare=100; write target=0f264be8-a13c-4d5c-8857-2e0b99743849:2
+Expected final seats=10 fare=100; unknown=True
+DRY RUN: no processes, sockets or result records were created.
+Case=all_reply_loss; mode=alo; seed=1001 seats=10 fare=100; write target=d185b983-7a7b-4b4e-8f3c-cd77ff8bc8b7:2
+Expected final seats=5 fare=100; unknown=True
+DRY RUN: no processes, sockets or result records were created.
+Case=all_reply_loss; mode=amo; seed=1001 seats=10 fare=100; write target=bff9a6c8-24f9-4b6a-8407-686cacd8e20c:2
+Expected final seats=9 fare=100; unknown=True
+DRY RUN: no processes, sockets or result records were created.
+Case=monitor; mode=alo; seed=1001 seats=10 fare=100; write target=36964d54-33d1-45a6-ba9e-0d02bc2c442b:2
+Expected final seats=10 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Case=monitor; mode=amo; seed=1001 seats=10 fare=100; write target=30e48c15-438c-4581-b5c1-0b2175a078bc:2
+Expected final seats=10 fare=100; unknown=False
+DRY RUN: no processes, sockets or result records were created.
+Placeholder preflight: PASS; actual case NOT executed; A implementation pending in BinaryProtocolCodec.java. Run server/test-b.ps1 for B independent tests; this network case was NOT executed.
+Results table unchanged: PASS

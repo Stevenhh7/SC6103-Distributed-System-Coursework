@@ -1,0 +1,160 @@
+{
+  "checks": [
+    "16 dry runs",
+    "A placeholders refused without modifying real results",
+    "occupied port refused before process start",
+    "owned Java startup failure retained as failure",
+    "per-run and aggregate failure CSV",
+    "no fixture results copied into real experiment results"
+  ],
+  "commands": [
+    {
+      "case": "baseline",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=baseline; mode=alo; seed=1001 seats=10 fare=100; write target=reserve:3 set:4 increase:5\nExpected final seats=9 fare=140; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "baseline",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=baseline; mode=amo; seed=1001 seats=10 fare=100; write target=reserve:3 set:4 increase:5\nExpected final seats=9 fare=140; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "request_loss_reserve",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=request_loss_reserve; mode=alo; seed=1001 seats=10 fare=100; write target=b5905dce-fe90-47c7-9730-407bb2c3055a:2\nExpected final seats=9 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "request_loss_reserve",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=request_loss_reserve; mode=amo; seed=1001 seats=10 fare=100; write target=60c0e154-c94b-4a00-afdb-4772c31847a6:2\nExpected final seats=9 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_reserve",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_reserve; mode=alo; seed=1001 seats=10 fare=100; write target=835e7131-72e9-4aea-8d7b-78961c2080f4:2\nExpected final seats=8 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_reserve",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_reserve; mode=amo; seed=1001 seats=10 fare=100; write target=5bf7404e-f442-44a6-8ca8-a12f694d0a13:2\nExpected final seats=9 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_increase",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_increase; mode=alo; seed=1001 seats=10 fare=100; write target=f1c611bc-3471-436c-8cc0-e762ed1ddb5d:2\nExpected final seats=10 fare=140; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_increase",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_increase; mode=amo; seed=1001 seats=10 fare=100; write target=9d99044e-a050-4a12-8851-d3184fb960f0:2\nExpected final seats=10 fare=120; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_set",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_set; mode=alo; seed=1001 seats=10 fare=100; write target=fb631128-7e12-4d37-9178-60dc7961244e:2\nExpected final seats=10 fare=120; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "reply_loss_set",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=reply_loss_set; mode=amo; seed=1001 seats=10 fare=100; write target=35fa9162-41ef-4e13-ac8c-e2c224d269ab:2\nExpected final seats=10 fare=120; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "all_request_loss",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=all_request_loss; mode=alo; seed=1001 seats=10 fare=100; write target=f8f73ac3-3ded-45dc-a07a-1371a35ee1f3:2\nExpected final seats=10 fare=100; unknown=True\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "all_request_loss",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=all_request_loss; mode=amo; seed=1001 seats=10 fare=100; write target=e53ef591-9651-4da2-bfa4-264ebb4637fb:2\nExpected final seats=10 fare=100; unknown=True\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "all_reply_loss",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=all_reply_loss; mode=alo; seed=1001 seats=10 fare=100; write target=8e31baa4-edf9-4ced-8b0a-27763d469ee9:2\nExpected final seats=5 fare=100; unknown=True\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "all_reply_loss",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=all_reply_loss; mode=amo; seed=1001 seats=10 fare=100; write target=c0df7fc7-eb1d-4482-b0c4-657ef407bf4a:2\nExpected final seats=9 fare=100; unknown=True\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "monitor",
+      "mode": "alo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=monitor; mode=alo; seed=1001 seats=10 fare=100; write target=none (monitor:2)\nExpected final seats=10 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "monitor",
+      "mode": "amo",
+      "dry": true,
+      "exit": 0,
+      "stdout": "Case=monitor; mode=amo; seed=1001 seats=10 fare=100; write target=none (monitor:2)\nExpected final seats=10 fare=100; unknown=False\nDRY RUN: no processes, sockets or result records were created.\n",
+      "stderr": ""
+    },
+    {
+      "case": "baseline",
+      "mode": "amo",
+      "dry": false,
+      "exit": 1,
+      "stdout": "Case=baseline; mode=amo; seed=1001 seats=10 fare=100; write target=reserve:3 set:4 increase:5\nExpected final seats=9 fare=140; unknown=False\n",
+      "stderr": "Exception: C:\\Users\\Administrator\\Documents\\ChatGPT\\103\\work\\b-implementation\\experiments\\run_suite.ps1:43\nLine |\n  43 |          throw \"A implementation pending in $bAFile. Run server/test-b …\n     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n     | A implementation pending in BinaryProtocolCodec.java. Run server/test-b.ps1 for B independent tests; this\n     | network case was NOT executed.\n"
+    },
+    {
+      "fixture": "occupied port",
+      "exit": 1,
+      "stdout": "Case=baseline; mode=amo; seed=1001 seats=10 fare=100; write target=reserve:3 set:4 increase:5\nExpected final seats=9 fare=140; unknown=False\nFixture: deliberately no Java class.\n",
+      "stderr": "Runtime preflight failed: [WinError 10048] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。\nException: C:\\Users\\Administrator\\Documents\\ChatGPT\\103\\work\\runner review fixture\\experiments\\run_suite.ps1:69\nLine |\n  69 |  … DE -ne 0) { throw 'Experiment port is occupied; no server/proxy was s …\n     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n     | Experiment port is occupied; no server/proxy was started.\n"
+    },
+    {
+      "fixture": "missing Java class",
+      "exit": 1,
+      "stdout": "Case=baseline; mode=amo; seed=1001 seats=10 fare=100; write target=reserve:3 set:4 increase:5\nExpected final seats=9 fare=140; unknown=False\nFixture: deliberately no Java class.\n{\"event\": \"PORTS_AVAILABLE\", \"ports\": [54730]}\n",
+      "stderr": "Runtime preflight failed: No matching query reply within 5 seconds; server is not ready\nException: C:\\Users\\Administrator\\Documents\\ChatGPT\\103\\work\\runner review fixture\\experiments\\run_suite.ps1:81\nLine |\n  81 |  … it -ne 0) { throw 'Owned Java server is not ready; inspect readiness/ …\n     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n     | Owned Java server is not ready; inspect readiness/server logs.\n"
+    }
+  ]
+}
