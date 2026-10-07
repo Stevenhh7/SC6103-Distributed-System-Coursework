@@ -162,7 +162,7 @@ ReplyBody = Union[
 
 @dataclass(frozen=True, slots=True)
 class Response:
-    """status 非零时 body 必须是 ErrorBody，待 C-02 验证。"""
+    """status 非零时 body 必须是 ErrorBody，由 C-02 解码器保证。"""
 
     status: Status
     body: ReplyBody

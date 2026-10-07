@@ -1,0 +1,73 @@
+Client requirements audit: 2026-10-07 (Asia/Shanghai)
+Python: 3.13.3
+Command: python -m unittest discover -s client/tests -v
+Scope: client behavior, simulated clocks and real loopback UDP; not Java business/three-machine acceptance.
+
+test_check_is_offline_and_closes (test_client.ClientTests.test_check_is_offline_and_closes) ... ok
+test_invalid_arguments_and_mismatched_selector (test_client.ClientTests.test_invalid_arguments_and_mismatched_selector) ... ok
+test_invalid_menu_inputs_never_invoke (test_client.ClientTests.test_invalid_menu_inputs_never_invoke) ... ok
+test_log_file_is_parseable_actual_events (test_client.ClientTests.test_log_file_is_parseable_actual_events) ... ok
+test_menu_all_operations_and_exit (test_client.ClientTests.test_menu_all_operations_and_exit) ... ok
+test_normal_eof_keyboard_and_network_error_close (test_client.ClientTests.test_normal_eof_keyboard_and_network_error_close) ... ok
+test_timeout_text_never_claims_failure_or_auto_retries (test_client.ClientTests.test_timeout_text_never_claims_failure_or_auto_retries) ... ok
+test_baseline_runs_six_operations_and_blocks_for_monitor (test_experiments.ExperimentTests.test_baseline_runs_six_operations_and_blocks_for_monitor) ... ok
+test_case_configuration_fails_before_network (test_experiments.ExperimentTests.test_case_configuration_fails_before_network) ... ok
+test_monitor_case_for_other_client (test_experiments.ExperimentTests.test_monitor_case_for_other_client) ... ok
+test_prequery_failure_prevents_write (test_experiments.ExperimentTests.test_prequery_failure_prevents_write) ... ok
+test_reply_loss_cases_use_same_invoker_and_read_final_state (test_experiments.ExperimentTests.test_reply_loss_cases_use_same_invoker_and_read_final_state) ... ok
+test_request_loss_case_drops_write_not_initial_query (test_experiments.ExperimentTests.test_request_loss_case_drops_write_not_initial_query) ... ok
+test_unknown_write_queries_after_but_never_repeats_new_write (test_experiments.ExperimentTests.test_unknown_write_queries_after_but_never_repeats_new_write) ... ok
+test_all_identity_fields_and_source_must_match (test_invoker.InvokerTests.test_all_identity_fields_and_source_must_match) ... ok
+test_all_replies_lost_no_extra_write_after_exhaustion (test_invoker.InvokerTests.test_all_replies_lost_no_extra_write_after_exhaustion) ... ok
+test_all_requests_lost_result_unknown_without_send (test_invoker.InvokerTests.test_all_requests_lost_result_unknown_without_send) ... ok
+test_business_and_mode_errors_end_without_retry (test_invoker.InvokerTests.test_business_and_mode_errors_end_without_retry) ... ok
+test_first_request_loss_consumes_attempt_and_waits (test_invoker.InvokerTests.test_first_request_loss_consumes_attempt_and_waits) ... ok
+test_id_exhaustion_does_not_wrap_or_reopen_socket (test_invoker.InvokerTests.test_id_exhaustion_does_not_wrap_or_reopen_socket) ... ok
+test_invalid_input_never_sends_or_consumes_id (test_invoker.InvokerTests.test_invalid_input_never_sends_or_consumes_id) ... ok
+test_late_reply_from_old_call_not_used_for_new_call (test_invoker.InvokerTests.test_late_reply_from_old_call_not_used_for_new_call) ... ok
+test_loss_simulator_target_and_once (test_invoker.InvokerTests.test_loss_simulator_target_and_once) ... ok
+test_monitor_error_discards_pending (test_invoker.InvokerTests.test_monitor_error_discards_pending) ... ok
+test_noise_cannot_extend_attempt_deadlines (test_invoker.InvokerTests.test_noise_cannot_extend_attempt_deadlines) ... ok
+test_pending_callback_keeps_highest_matching_sequence (test_invoker.InvokerTests.test_pending_callback_keeps_highest_matching_sequence) ... ok
+test_pending_callbacks_never_confirm_and_do_not_extend_deadline (test_invoker.InvokerTests.test_pending_callbacks_never_confirm_and_do_not_extend_deadline) ... ok
+test_retransmit_same_bytes_and_encode_once (test_invoker.InvokerTests.test_retransmit_same_bytes_and_encode_once) ... ok
+test_sessions_are_independent (test_invoker.InvokerTests.test_sessions_are_independent) ... ok
+test_wrong_flight_or_excessive_duration_ignored (test_invoker.InvokerTests.test_wrong_flight_or_excessive_duration_ignored) ... ok
+test_callback_arriving_after_deadline_not_shown (test_monitor.MonitorTests.test_callback_arriving_after_deadline_not_shown) ... ok
+test_confirmation_timestamp_not_menu_time (test_monitor.MonitorTests.test_confirmation_timestamp_not_menu_time) ... ok
+test_no_events_expires (test_monitor.MonitorTests.test_no_events_expires) ... ok
+test_pending_highest_then_only_increasing_and_current_identity (test_monitor.MonitorTests.test_pending_highest_then_only_increasing_and_current_identity) ... ok
+test_repeated_confirmation_and_noise_do_not_extend (test_monitor.MonitorTests.test_repeated_confirmation_and_noise_do_not_extend) ... ok
+test_unknown_registration_cannot_start_monitor (test_monitor.MonitorTests.test_unknown_registration_cannot_start_monitor) ... ok
+test_zero_or_already_expired_never_receives_or_displays_pending (test_monitor.MonitorTests.test_zero_or_already_expired_never_receives_or_displays_pending) ... ok
+test_all_six_request_layouts (test_protocol_codec.CodecTests.test_all_six_request_layouts) ... ok
+test_bad_reply_bodies (test_protocol_codec.CodecTests.test_bad_reply_bodies) ... ok
+test_binary32_rounding_and_input_bounds (test_protocol_codec.CodecTests.test_binary32_rounding_and_input_bounds) ... ok
+test_invalid_header_fields (test_protocol_codec.CodecTests.test_invalid_header_fields) ... ok
+test_normative_reply_vectors (test_protocol_codec.CodecTests.test_normative_reply_vectors) ... ok
+test_normative_request_vectors (test_protocol_codec.CodecTests.test_normative_request_vectors) ... ok
+test_other_success_and_unknown_operation_error (test_protocol_codec.CodecTests.test_other_success_and_unknown_operation_error) ... ok
+test_request_header_and_body_validation (test_protocol_codec.CodecTests.test_request_header_and_body_validation) ... ok
+test_string_boundaries (test_protocol_codec.CodecTests.test_string_boundaries) ... ok
+test_truncation_and_extra_tail (test_protocol_codec.CodecTests.test_truncation_and_extra_tail) ... ok
+test_all_send_timeouts_return_unknown_after_finite_attempts (test_requirements_audit.AuditTests.test_all_send_timeouts_return_unknown_after_finite_attempts) ... ok
+test_alo_receives_mode_mismatch_echoing_alo (test_requirements_audit.AuditTests.test_alo_receives_mode_mismatch_echoing_alo) ... ok
+test_alo_retries_and_accepts_only_alo_confirmation (test_requirements_audit.AuditTests.test_alo_retries_and_accepts_only_alo_confirmation) ... ok
+test_baseline_unknown_write_still_reads_final_state_without_more_writes (test_requirements_audit.AuditTests.test_baseline_unknown_write_still_reads_final_state_without_more_writes) ... ok
+test_case_log_contains_values_for_reproduction (test_requirements_audit.AuditTests.test_case_log_contains_values_for_reproduction) ... ok
+test_expired_replayed_confirmation_discards_pending_callback (test_requirements_audit.AuditTests.test_expired_replayed_confirmation_discards_pending_callback) ... ok
+test_monitor_replayed_confirmation_uses_reduced_remaining_time (test_requirements_audit.AuditTests.test_monitor_replayed_confirmation_uses_reduced_remaining_time) ... ok
+test_request_log_contains_reproducible_parameters (test_requirements_audit.AuditTests.test_request_log_contains_reproducible_parameters) ... ok
+test_send_timeout_uses_remaining_attempt_time_then_retries_same_request (test_requirements_audit.AuditTests.test_send_timeout_uses_remaining_attempt_time_then_retries_same_request) ... ok
+test_send_does_not_inherit_tiny_receive_timeout (test_requirements_audit.TransportAuditTests.test_send_does_not_inherit_tiny_receive_timeout) ... ok
+test_two_real_clients_same_request_id_have_separate_ports_and_callbacks (test_requirements_audit.TransportAuditTests.test_two_real_clients_same_request_id_have_separate_ports_and_callbacks) ... ok
+test_construction_and_check_do_not_open_network (test_udp_transport.UdpTests.test_construction_and_check_do_not_open_network) ... ok
+test_real_receive_preserves_source_and_full_oversized_packet (test_udp_transport.UdpTests.test_real_receive_preserves_source_and_full_oversized_packet) ... ok
+test_real_retry_retains_port_and_monitor_reuses_socket (test_udp_transport.UdpTests.test_real_retry_retains_port_and_monitor_reuses_socket) ... ok
+test_six_operations_alo_over_real_udp (test_udp_transport.UdpTests.test_six_operations_alo_over_real_udp) ... ok
+test_six_operations_over_real_udp_with_independent_response_bytes (test_udp_transport.UdpTests.test_six_operations_over_real_udp_with_independent_response_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 0.232s
+
+OK

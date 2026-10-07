@@ -1,0 +1,66 @@
+{
+  "source": "Python client encoder; not a Java interoperability result",
+  "sessionId": "00112233-4455-4677-8899-aabbccddeeff",
+  "semantics": "AMO",
+  "vectors": [
+    {
+      "operation": "QUERY_ROUTE",
+      "requestId": 1,
+      "body": {
+        "source": "SIN",
+        "destination": "PEK"
+      },
+      "bytes": 46,
+      "hex": "0101000100112233445546778899aabbccddeeff00000001000002000000000e0000000353494e0000000350454b"
+    },
+    {
+      "operation": "QUERY_FLIGHT",
+      "requestId": 2,
+      "body": {
+        "flightId": 1001
+      },
+      "bytes": 36,
+      "hex": "0101000200112233445546778899aabbccddeeff000000020000020000000004000003e9"
+    },
+    {
+      "operation": "RESERVE_SEATS",
+      "requestId": 3,
+      "body": {
+        "flightId": 1001,
+        "quantity": 2
+      },
+      "bytes": 40,
+      "hex": "0101000300112233445546778899aabbccddeeff000000030000020000000008000003e900000002"
+    },
+    {
+      "operation": "MONITOR_SEATS",
+      "requestId": 4,
+      "body": {
+        "flightId": 1001,
+        "durationSeconds": 60
+      },
+      "bytes": 40,
+      "hex": "0101000400112233445546778899aabbccddeeff000000040000020000000008000003e90000003c"
+    },
+    {
+      "operation": "SET_AIRFARE",
+      "requestId": 5,
+      "body": {
+        "flightId": 1001,
+        "newPrice": 120.0
+      },
+      "bytes": 40,
+      "hex": "0101000500112233445546778899aabbccddeeff000000050000020000000008000003e942f00000"
+    },
+    {
+      "operation": "INCREASE_AIRFARE",
+      "requestId": 6,
+      "body": {
+        "flightId": 1001,
+        "delta": 20.0
+      },
+      "bytes": 40,
+      "hex": "0101000600112233445546778899aabbccddeeff000000060000020000000008000003e941a00000"
+    }
+  ]
+}
