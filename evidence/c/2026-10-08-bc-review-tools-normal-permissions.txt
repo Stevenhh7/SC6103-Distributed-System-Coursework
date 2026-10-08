@@ -1,0 +1,32 @@
+test_all_loss_requires_exact_actual_proxy_drops (experiments.test_analyze_results.AnalyzerTest.test_all_loss_requires_exact_actual_proxy_drops) ... ok
+test_all_sixteen_controlled_flows_use_actual_c_logging (experiments.test_analyze_results.AnalyzerTest.test_all_sixteen_controlled_flows_use_actual_c_logging) ... ok
+test_controlled_parameters_must_match (experiments.test_analyze_results.AnalyzerTest.test_controlled_parameters_must_match) ... ok
+test_correct_state_without_retry_is_not_fault_verified (experiments.test_analyze_results.AnalyzerTest.test_correct_state_without_retry_is_not_fault_verified) ... ok
+test_duplicate_terminal_rejected (experiments.test_analyze_results.AnalyzerTest.test_duplicate_terminal_rejected) ... ok
+test_foreign_session_rejected (experiments.test_analyze_results.AnalyzerTest.test_foreign_session_rejected) ... ok
+test_incomplete_log_cli_writes_failure_analysis (experiments.test_analyze_results.AnalyzerTest.test_incomplete_log_cli_writes_failure_analysis) ... ok
+test_missing_attempt_timeout_rejected (experiments.test_analyze_results.AnalyzerTest.test_missing_attempt_timeout_rejected) ... ok
+test_missing_before_cannot_be_replaced_by_after (experiments.test_analyze_results.AnalyzerTest.test_missing_before_cannot_be_replaced_by_after) ... ok
+test_missing_identity_is_not_accepted (experiments.test_analyze_results.AnalyzerTest.test_missing_identity_is_not_accepted) ... ok
+test_out_of_order_phases_rejected (experiments.test_analyze_results.AnalyzerTest.test_out_of_order_phases_rejected) ... ok
+test_retry_cannot_precede_previous_attempt_timeout (experiments.test_analyze_results.AnalyzerTest.test_retry_cannot_precede_previous_attempt_timeout) ... ok
+test_unexpected_state_rejected (experiments.test_analyze_results.AnalyzerTest.test_unexpected_state_rejected) ... ok
+test_unknown_exit_cannot_be_silently_accepted_as_success (experiments.test_analyze_results.AnalyzerTest.test_unknown_exit_cannot_be_silently_accepted_as_success) ... ok
+test_wrong_flight_or_input_rejected (experiments.test_analyze_results.AnalyzerTest.test_wrong_flight_or_input_rejected) ... ok
+test_wrong_mode_rejected (experiments.test_analyze_results.AnalyzerTest.test_wrong_mode_rejected) ... ok
+test_wrong_operation_rejected (experiments.test_analyze_results.AnalyzerTest.test_wrong_operation_rejected) ... ok
+test_free_port_probe_is_closed_even_after_failure (experiments.test_runtime_check.RuntimeCheckTest.test_free_port_probe_is_closed_even_after_failure) ... ok
+test_occupied_udp_port_rejected (experiments.test_runtime_check.RuntimeCheckTest.test_occupied_udp_port_rejected) ... ok
+test_port_probe_succeeds_without_leaving_socket_open (experiments.test_runtime_check.RuntimeCheckTest.test_port_probe_succeeds_without_leaving_socket_open) ... ok
+test_readiness_is_read_only_and_rejects_unknown_errors_stale_seed (experiments.test_runtime_check.RuntimeCheckTest.test_readiness_is_read_only_and_rejects_unknown_errors_stale_seed) ... ok
+test_all_target_replies_dropped_callback_passes (experiments.test_udp_loss_proxy.ProxyTest.test_all_target_replies_dropped_callback_passes) ... ok
+test_all_target_requests_dropped_queries_forward_and_backend_stable (experiments.test_udp_loss_proxy.ProxyTest.test_all_target_requests_dropped_queries_forward_and_backend_stable) ... ok
+test_invalid_fault_selector_rejected (experiments.test_udp_loss_proxy.ProxyTest.test_invalid_fault_selector_rejected) ... ok
+test_log_separates_actual_packet_identity_from_fault_target (experiments.test_udp_loss_proxy.ProxyTest.test_log_separates_actual_packet_identity_from_fault_target) ... ok
+test_other_identity_or_query_reply_is_not_dropped (experiments.test_udp_loss_proxy.ProxyTest.test_other_identity_or_query_reply_is_not_dropped) ... ok
+test_unexpected_source_and_second_client_ignored (experiments.test_udp_loss_proxy.ProxyTest.test_unexpected_source_and_second_client_ignored) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 2.083s
+
+OK

@@ -1,0 +1,4 @@
+Case=all_reply_loss; mode=amo; seed=1001 seats=10 fare=100; write target=e5f66284-fa62-47c9-80a9-b39f6a54ac6d:2
+Expected final seats=9 fare=100; unknown=True
+DRY RUN: no processes, sockets or result records were created.
+

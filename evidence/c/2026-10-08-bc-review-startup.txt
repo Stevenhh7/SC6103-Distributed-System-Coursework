@@ -1,0 +1,8 @@
+Review date: 2026-10-08
+Commit: aec435952496319921d9da86750ce87041b28626
+Command: java -cp server/build/b-test-classes flight.ServerMain --check
+Server scaffold OK: configuration, DTO classes and component wiring.
+UDP, codec, business, history and callbacks are NOT implemented; no port was bound.
+Command: java -cp server/build/b-test-classes flight.ServerMain --bind 127.0.0.1 --port 17889 --semantics amo
+Scaffold only: [A-03] server event loop is not implemented; see server/TODO.md
+Normal startup failed in the unimplemented event loop. No network acceptance claimed.
