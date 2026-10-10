@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)\n",
+  "javac": "javac 21.0.5\n",
+  "baseline": "190189a507e55afef1ac3fc94d2ed21a113b82b2",
+  "source_state": "working tree; see source-manifest.json for exact tested source hashes",
+  "scope": "Local computer, real UDP processes; not three physical computers"
+}

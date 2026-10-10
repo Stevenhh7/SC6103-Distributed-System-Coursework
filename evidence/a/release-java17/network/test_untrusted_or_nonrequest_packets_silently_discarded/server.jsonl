@@ -1,0 +1,12 @@
+{"event":"SERVER_READY","nanoTime":663731525259208,"bind":"127.0.0.1","port":49449,"mode":"AMO"}
+{"event":"DROP_MALFORMED","nanoTime":663731547416666,"peer":"/127.0.0.1:53869","bytes":20,"reason":"Truncated header"}
+{"event":"DROP_MALFORMED","nanoTime":663731628241916,"peer":"/127.0.0.1:53869","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_MALFORMED","nanoTime":663731709596208,"peer":"/127.0.0.1:53869","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_MALFORMED","nanoTime":663731791082708,"peer":"/127.0.0.1:53869","bytes":36,"reason":"Invalid request identity or mode"}
+{"event":"DROP_MALFORMED","nanoTime":663731875398375,"peer":"/127.0.0.1:53869","bytes":36,"reason":"Invalid request identity or mode"}
+{"event":"DROP_MALFORMED","nanoTime":663731958842708,"peer":"/127.0.0.1:53869","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_NON_REQUEST","nanoTime":663732042156708,"peer":"/127.0.0.1:53869","messageType":"REPLY"}
+{"event":"REQUEST_RECEIVED","nanoTime":663732125736000,"mode":"AMO","sessionId":"45c704b4-1c54-4d7f-a134-c28f99c446b9","requestId":8,"operation":2,"peer":"/127.0.0.1:53869","encodedHex":"0101000245c704b41c544d7fa134c28f99c446b9000000080000020000000004000003e9"}
+{"event":"BUSINESS_EXECUTED","nanoTime":663732129041416,"mode":"AMO","sessionId":"45c704b4-1c54-4d7f-a134-c28f99c446b9","requestId":8,"operation":2,"peer":"/127.0.0.1:53869","cacheHit":false,"businessExecuted":true,"status":0,"request":"FlightQuery[flightId=1001]","response":"FlightDetails[departure=FlightTime[year=2026, month=10, day=17, hour=9, minute=30], airfare=100.0, availableSeats=10]"}
+{"event":"HISTORY_SAVED","nanoTime":663732167277041,"mode":"AMO","sessionId":"45c704b4-1c54-4d7f-a134-c28f99c446b9","requestId":8,"operation":2,"peer":"/127.0.0.1:53869","status":0}
+{"event":"REPLY_SENT","nanoTime":663732168062000,"mode":"AMO","sessionId":"45c704b4-1c54-4d7f-a134-c28f99c446b9","requestId":8,"operation":2,"peer":"/127.0.0.1:53869","cacheHit":false,"encodedHex":"0102000245c704b41c544d7fa134c28f99c446b900000008000002000000001c000007ea0000000a00000011000000090000001e42c800000000000a"}

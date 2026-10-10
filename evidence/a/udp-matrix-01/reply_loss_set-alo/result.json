@@ -1,0 +1,17 @@
+{
+  "case": "reply_loss_set",
+  "mode": "alo",
+  "session": "c8d217e8-293d-4291-b1dd-618216707978",
+  "flight_id": 1001,
+  "result": "PASSED_LOCAL_UDP",
+  "evidence": "evidence/a/udp-matrix-01/reply_loss_set-alo",
+  "initial_seats": 10,
+  "final_seats": 10,
+  "initial_fare": 100.0,
+  "final_fare": 120.0,
+  "mutation_attempts": 2,
+  "client_unknown": false,
+  "notes": "Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.",
+  "business_executions": 2,
+  "cache_hits": 0
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "a-protocol",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ProtocolSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "a-semantics",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.SemanticsSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "b-business",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.BusinessSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "b-monitor",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.MonitorSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "c-client",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "client/tests",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "experiment-tools",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "unittest",
+      "experiments.test_analyze_results",
+      "experiments.test_runtime_check",
+      "experiments.test_udp_loss_proxy",
+      "experiments.test_monitor_evidence",
+      "experiments.test_server_evidence",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "java-integration",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "unittest",
+      "experiments.test_java_integration",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "udp-matrix",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "experiments.run_suite",
+      "--output",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/final-java17/matrix"
+    ],
+    "exit_code": 0
+  }
+]

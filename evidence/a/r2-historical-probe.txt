@@ -1,0 +1,32 @@
+[
+  {
+    "check": "synthetic_monitor_ends_before_deadline_is_rejected",
+    "mode": "alo",
+    "baseline_result": "STATE_VERIFIED_NEEDS_A_LOG_REVIEW",
+    "result": "EARLY_MONITOR_REJECTED",
+    "confirmation_remaining_ms": 1000,
+    "start": 100.2,
+    "deadline": 101.2,
+    "end": 100.2,
+    "evidence_kind": "synthetic log regression probe; NOT network integration"
+  },
+  {
+    "check": "synthetic_monitor_ends_before_deadline_is_rejected",
+    "mode": "amo",
+    "baseline_result": "STATE_VERIFIED_NEEDS_A_LOG_REVIEW",
+    "result": "EARLY_MONITOR_REJECTED",
+    "confirmation_remaining_ms": 1000,
+    "start": 100.2,
+    "deadline": 101.2,
+    "end": 100.2,
+    "evidence_kind": "synthetic log regression probe; NOT network integration"
+  },
+  {
+    "check": "incomplete_log_cli_in_plain_workspace_directory",
+    "passed": true,
+    "exit_code": 1,
+    "result": "FAILED_OR_INCOMPLETE",
+    "loader_rejected": true,
+    "evidence_kind": "equivalent assertions; this probe alone does not rerun the original unittest"
+  }
+]

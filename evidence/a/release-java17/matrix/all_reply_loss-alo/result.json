@@ -1,0 +1,17 @@
+{
+  "case": "all_reply_loss",
+  "mode": "alo",
+  "session": "2d72d37c-93ec-4a40-a0ed-4891cf0d887d",
+  "flight_id": 1001,
+  "result": "PASSED_LOCAL_UDP",
+  "evidence": "../../../../../../../../Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/release-java17/matrix/all_reply_loss-alo",
+  "initial_seats": 10,
+  "final_seats": 5,
+  "initial_fare": 100.0,
+  "final_fare": 100.0,
+  "mutation_attempts": 5,
+  "client_unknown": true,
+  "notes": "Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.",
+  "business_executions": 5,
+  "cache_hits": 0
+}

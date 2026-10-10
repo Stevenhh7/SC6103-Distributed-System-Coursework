@@ -1,3 +1,7 @@
+> **2026-10-10 实测更新：** 下面保留 B 在 10-07 的用例设计和历史状态。A 已完成；16 个 ALO/AMO 组合均通过真实 Java 17 本机 UDP 验证，实际结果见 [最终 CSV](../evidence/a/release-java17/matrix/results.csv)。200 组自动化测试通过，三机未执行。
+>
+> 推荐跨平台入口：`python3 -m experiments.verify_all --matrix`；只运行实验：`python3 -m experiments.run_suite`；单例：`python3 -m experiments.run_suite --case reply_loss_reserve --mode amo`。Windows 将 python3 改为 python。新入口直接核对 A 日志，无需人工猜测执行次数。PowerShell 专用入口本次未在 Windows 上验证。
+
 # B 实验用例与验收标准
 
 日期：2026-10-07。B 负责用例、复位、证据和报告整合；A 提供服务端执行次数/缓存命中；C 提供既有 `run_case`/CLI 与客户端日志。

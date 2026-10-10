@@ -1,0 +1,23 @@
+[
+  {
+    "requestId": 1,
+    "operation": 2,
+    "businessExecutions": 1,
+    "cacheHits": 0,
+    "dropReplies": 0
+  },
+  {
+    "requestId": 2,
+    "operation": 5,
+    "businessExecutions": 2,
+    "cacheHits": 0,
+    "dropReplies": 1
+  },
+  {
+    "requestId": 3,
+    "operation": 2,
+    "businessExecutions": 1,
+    "cacheHits": 0,
+    "dropReplies": 0
+  }
+]
