@@ -2,7 +2,7 @@
 
 负责人：C。Python 3.10+，仅标准库。实现依据为 [接口规范 v1.0](../SC6103_接口与数据类型规范.md) 和 [最新详细分工](../SC6103_三人详细分工与接口责任表.md)。
 
-已实现六操作菜单、手工二进制 codec、UDP/IPv4、有限重传、请求丢失注入、监控回调、实验入口和证据日志。客户端独立测试通过；当前仓库 Java 服务端核心仍是占位方法，真实 Java 联调、三机验证待 A/B 实现后进行。职责与剩余事项见 [TODO](TODO.md)。
+已实现六操作菜单、手工二进制 codec、UDP/IPv4、有限重传、请求丢失注入、监控回调、实验入口和证据日志。2026-10-10：客户端 63 项独立测试重跑通过，真实 Java 17 UDP 集成及 16 项故障实验通过；三台物理电脑验证待执行。职责与剩余事项见 [TODO](TODO.md)。
 
 ## 启动与自测
 
@@ -15,7 +15,7 @@ python -m unittest discover -s client/tests -v
 python -m client --server 127.0.0.1 --port 6789 --semantics amo
 ~~~
 
-服务器完成后，最后一条命令提供 1..6 六操作及 0 退出。跨电脑使用服务端实际 IPv4 地址；客户端与服务端模式须一致。监控期间暂停菜单，自动到期后恢复。EOF 正常退出；Ctrl+C 中断并关闭 socket。中断不会取消服务端已经执行的操作。
+最后一条命令提供 1..6 六操作及 0 退出。跨电脑使用服务端实际 IPv4 地址；客户端与服务端模式须一致。监控期间暂停菜单，自动到期后恢复。EOF 正常退出；Ctrl+C 中断并关闭 socket。中断不会取消服务端已经执行的操作。
 
 --check 只检查配置和装配，不解析 DNS、不打开 socket，不代表业务或网络联调通过。测试采用模拟传输和真实 127.0.0.1 UDP 应答器；应答器仅在测试线程运行。
 
@@ -87,7 +87,7 @@ python -m client --server 127.0.0.1 --port 6789 --semantics amo
 下面的 1001、SIN/PEK 是命令示例，**须替换为 B 的实际种子数据**：
 
 ~~~powershell
-python -m client --semantics amo --case baseline --flight-id 1001 --source SIN --destination PEK --log-file evidence/c/baseline.jsonl
+python -m client --semantics amo --case baseline --flight-id 1001 --source Singapore --destination Beijing --delta 20 --monitor-seconds 2 --log-file evidence/c/baseline.jsonl
 
 python -m client --semantics amo --session-id 00112233-4455-4677-8899-aabbccddeeff --case request_loss_reserve --flight-id 1001 --log-file evidence/c/request-loss-amo.jsonl
 

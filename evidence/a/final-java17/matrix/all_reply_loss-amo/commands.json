@@ -1,0 +1,72 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "57778",
+      "--semantics",
+      "amo"
+    ]
+  },
+  {
+    "name": "proxy",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-u",
+      "-m",
+      "experiments.udp_loss_proxy",
+      "--listen-port",
+      "59505",
+      "--server-port",
+      "57778",
+      "--session-id",
+      "2493051b-220f-4c47-923d-f5828e818b35",
+      "--request-id",
+      "2",
+      "--drop",
+      "replies"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "client",
+      "--port",
+      "59505",
+      "--semantics",
+      "amo",
+      "--session-id",
+      "2493051b-220f-4c47-923d-f5828e818b35",
+      "--case",
+      "reply_loss_reserve",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/final-java17/matrix/all_reply_loss-amo/client.jsonl"
+    ]
+  }
+]

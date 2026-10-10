@@ -1,0 +1,8 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)\n",
+  "baseline": "190189a507e55afef1ac3fc94d2ed21a113b82b2",
+  "working_tree": " M experiments/analyze_results.py\n M server/build.ps1\n M server/src/flight/BinaryProtocolCodec.java\n M server/src/flight/InMemoryRequestHistory.java\n M server/src/flight/LossSimulator.java\n M server/src/flight/ProtocolException.java\n M server/src/flight/RequestDispatcher.java\n M server/src/flight/ServerMain.java\n M server/src/flight/UdpServer.java\n M server/src/flight/UdpTransport.java\n?? evidence/a/\n?? experiments/run_suite.py\n?? experiments/test_java_integration.py\n?? experiments/test_monitor_evidence.py\n?? experiments/test_server_evidence.py\n?? experiments/verify_all.py\n?? server/build.sh\n?? server/src/flight/ServerLog.java\n?? server/test/flight/a/\n",
+  "scope": "Real loopback UDP, not multiple computers"
+}

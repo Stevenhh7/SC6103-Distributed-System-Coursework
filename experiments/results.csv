@@ -1,25 +1,25 @@
-﻿case,mode,session,flight_id,initial_seats,final_seats,initial_fare,final_fare,mutation_attempts,client_unknown,business_executions,cache_hits,result,evidence,notes
-baseline,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-baseline,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-request_loss_reserve,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-request_loss_reserve,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_reserve,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_reserve,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_increase,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_increase,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_set,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-reply_loss_set,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-all_request_loss,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-all_request_loss,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-all_reply_loss,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-all_reply_loss,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-monitor,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-monitor,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-dual_monitor,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-dual_monitor,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-flight_isolation,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-flight_isolation,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-monitor_replay,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-monitor_replay,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-three_computers,alo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
-three_computers,amo,,,,,,,,,,,NOT_EXECUTED,,"A integration pending; blank values are unknown, not zero."
+case,mode,session,flight_id,initial_seats,final_seats,initial_fare,final_fare,mutation_attempts,client_unknown,business_executions,cache_hits,result,evidence,notes
+baseline,alo,7fdc8613-1dbb-4816-96bb-2560ee10a50d,1001,10,9,100.0,140.0,,False,,,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/baseline-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+baseline,amo,2d9ad7b4-0761-4f29-87c2-f34609c8ae0b,1001,10,9,100.0,140.0,,False,,,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/baseline-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+request_loss_reserve,alo,9bf3f754-6f32-48fd-947f-bc96d91dbc8b,1001,10,9,100.0,100.0,2,False,1,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/request_loss_reserve-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+request_loss_reserve,amo,59add0b3-1a9d-44d3-bae8-6f95ecffc74f,1001,10,9,100.0,100.0,2,False,1,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/request_loss_reserve-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_reserve,alo,b7cab5f5-d045-471c-8b34-246bfb20f062,1001,10,8,100.0,100.0,2,False,2,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_reserve-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_reserve,amo,1409dc99-3d78-4f42-bd3e-cb5e4be165bc,1001,10,9,100.0,100.0,2,False,1,1,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_reserve-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_increase,alo,8b280963-dd32-49e4-9f87-77b87aaf1364,1001,10,10,100.0,140.0,2,False,2,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_increase-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_increase,amo,d49eb862-52f3-424d-a7b9-16dbb1e7568d,1001,10,10,100.0,120.0,2,False,1,1,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_increase-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_set,alo,ada07175-2bcc-40dc-9445-6ce2a1b39258,1001,10,10,100.0,120.0,2,False,2,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_set-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+reply_loss_set,amo,6b23e9f9-e1e3-4d50-8a61-e8f23fe454a9,1001,10,10,100.0,120.0,2,False,1,1,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/reply_loss_set-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+all_request_loss,alo,b2b42ee4-d2ce-49e8-b2d4-4870109c92a8,1001,10,10,100.0,100.0,5,True,0,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/all_request_loss-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+all_request_loss,amo,3ee8da74-eeb0-4ecb-8015-8f6285acb1f9,1001,10,10,100.0,100.0,5,True,0,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/all_request_loss-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+all_reply_loss,alo,2d72d37c-93ec-4a40-a0ed-4891cf0d887d,1001,10,5,100.0,100.0,5,True,5,0,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/all_reply_loss-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+all_reply_loss,amo,3724cb2c-40d8-413b-8f21-c374c7271932,1001,10,9,100.0,100.0,5,True,1,4,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/all_reply_loss-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+monitor,alo,9770f554-d127-4e74-9e83-b2fec8a9f12f,1001,10,10,100.0,100.0,,False,,,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/monitor-alo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+monitor,amo,487b50bb-593e-49a1-9bcd-2e3a1ec4aecc,1001,10,10,100.0,100.0,,False,,,PASSED_LOCAL_UDP,evidence/a/release-java17/matrix/monitor-amo,Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.
+dual_monitor,alo,,,,,,,,,,,NOT_EXECUTED,,This exact case/mode not run in the 16-case matrix; do not infer a pass.
+dual_monitor,amo,,,,,,,,,,,PASSED_LOCAL_UDP_BOUNDARY,evidence/a/release-java17/network/test_dual_monitor_callback_identity_and_no_duplicate_amo_event,"Passed real Java integration unittest; multiple sessions/requests, see logs. Not a standard matrix row or three-computer result."
+flight_isolation,alo,,,,,,,,,,,NOT_EXECUTED,,This exact case/mode not run in the 16-case matrix; do not infer a pass.
+flight_isolation,amo,,,,,,,,,,,PASSED_LOCAL_UDP_BOUNDARY,evidence/a/release-java17/network/test_flight_isolation_and_expiry_stops_callback,"Passed real Java integration unittest; multiple sessions/requests, see logs. Not a standard matrix row or three-computer result."
+monitor_replay,alo,,,,,,,,,,,NOT_EXECUTED,,This exact case/mode not run in the 16-case matrix; do not infer a pass.
+monitor_replay,amo,,,,,,,,,,,PASSED_LOCAL_UDP_BOUNDARY,evidence/a/release-java17/network/test_monitor_remaining_replay_replacement_expiry,"Passed real Java integration unittest; multiple sessions/requests, see logs. Not a standard matrix row or three-computer result."
+three_computers,alo,,,,,,,,,,,NOT_EXECUTED,,Separate three-computer demonstration pending.
+three_computers,amo,,,,,,,,,,,NOT_EXECUTED,,Separate three-computer demonstration pending.
