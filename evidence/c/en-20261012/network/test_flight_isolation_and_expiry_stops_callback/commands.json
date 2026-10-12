@@ -1,0 +1,17 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "59629",
+      "--semantics",
+      "amo"
+    ]
+  }
+]

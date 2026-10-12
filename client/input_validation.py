@@ -6,7 +6,7 @@ from .protocol_codec import ProtocolError, to_binary32
 
 def positive_int(value: int, maximum: int = MAX_REQUEST_ID) -> int:
     if not isinstance(value, int) or isinstance(value, bool) or not 1 <= value <= maximum:
-        raise ValueError(f"请输入 1..{maximum} 的整数")
+        raise ValueError(f"Enter an integer from 1 to {maximum}")
     return value
 
 
@@ -16,14 +16,15 @@ def location(value: str) -> str:
     try:
         length = len(trimmed.encode("utf-8", errors="strict"))
     except UnicodeError as exc:
-        raise ValueError("地点包含无法编码为 UTF-8 的字符") from exc
+        raise ValueError("Location contains characters that cannot be encoded as UTF-8") from exc
     if not trimmed or length > MAX_LOCATION_UTF8_BYTES:
-        raise ValueError("地点不能为空，且最多 128 个 UTF-8 字节")
+        raise ValueError("Location must be nonempty and at most 128 UTF-8 bytes")
     return trimmed
 
 
 def price(value: float, *, positive: bool = False) -> float:
     rounded = to_binary32(value)
     if rounded < 0 or (positive and rounded <= 0):
-        raise ProtocolError("增加金额必须在 float32 转换后大于 0" if positive else "票价不能为负")
+        raise ProtocolError("Increase amount must be greater than 0 after float32 conversion"
+                            if positive else "Airfare must be nonnegative")
     return 0.0 if rounded == 0 else rounded

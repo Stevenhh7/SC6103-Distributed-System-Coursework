@@ -35,8 +35,9 @@ class ExperimentTests(unittest.TestCase):
         run_case(invoker, "request_loss_reserve")
         self.assertEqual([int.from_bytes(raw[20:24], "big") for _, raw in invoker.transport.sent], [1, 2, 3])
         self.assertEqual(invoker.transport.sent[1][0], 101.1)
-        self.assertIn(f"写操作故障目标：{SESSION}:2", self.output.getvalue())
-        self.assertIn("尝试 2 次", self.output.getvalue())
+        self.assertIn(f"Write fault target: {SESSION}:2", self.output.getvalue())
+        self.assertIn("attempts: 2", self.output.getvalue())
+        self.assertTrue(self.output.getvalue().isascii())
 
     def test_reply_loss_cases_use_same_invoker_and_read_final_state(self):
         cases = [("reply_loss_reserve", 3, i32(8)), ("reply_loss_increase", 6, bytes.fromhex("43020000")),
@@ -59,7 +60,7 @@ class ExperimentTests(unittest.TestCase):
         with self.assertRaises(ExperimentFailure):
             run_case(invoker, "reply_loss_reserve")
         self.assertEqual([int.from_bytes(raw[2:4], "big") for _, raw in invoker.transport.sent], [2, 3, 2])
-        self.assertIn("执行结果未知", self.output.getvalue())
+        self.assertIn("execution result is unknown", self.output.getvalue())
 
     def test_prequery_failure_prevents_write(self):
         invoker = make_invoker(self.clock, max_attempts=1, experiment=ExperimentConfig(1001))
@@ -83,6 +84,7 @@ class ExperimentTests(unittest.TestCase):
         self.assertEqual([int.from_bytes(raw[2:4], "big") for _, raw in invoker.transport.sent],
                          [2, 1, 3, 5, 6, 4, 2])
         self.assertAlmostEqual(invoker.transport.sent[-1][0], 101.1)
+        self.assertTrue(self.output.getvalue().isascii())
 
     def test_monitor_case_for_other_client(self):
         invoker = make_invoker(self.clock, [(0.1, detail(), PEER), (0.2, monitor_reply(0, request_id=2), PEER),

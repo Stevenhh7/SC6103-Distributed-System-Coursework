@@ -33,8 +33,8 @@ def monitor_until_expiry(invoker: "Invoker", accepted: AcceptedMonitor) -> None:
         if (invoker.matches_callback(message, accepted.request_key, accepted.flight_id)
                 and message.updateSequence > largest_sequence):
             largest_sequence = message.updateSequence
-            print(f"座位更新：航班 {message.flightId}，余座 {message.availableSeats}，"
-                  f"序号 {message.updateSequence}", flush=True)
+            print(f"Seat update: flight {message.flightId}, available seats {message.availableSeats}, "
+                  f"sequence {message.updateSequence}", flush=True)
             invoker.log("CALLBACK", accepted.request_key, Operation.MONITOR_SEATS,
                         flightId=message.flightId, availableSeats=message.availableSeats,
                         sequence=message.updateSequence)
@@ -59,6 +59,6 @@ def monitor_until_expiry(invoker: "Invoker", accepted: AcceptedMonitor) -> None:
         if isinstance(message, CallbackMessage):
             display(message)
         # 所有普通回复（包含重复确认）及旧登记回调都不能改变 deadline。
-    print(f"航班 {accepted.flight_id} 的本次监控已结束。", flush=True)
+    print(f"Monitoring ended for flight {accepted.flight_id}.", flush=True)
     invoker.log("MONITOR_END", accepted.request_key, Operation.MONITOR_SEATS,
                 flightId=accepted.flight_id, lastSequence=largest_sequence)

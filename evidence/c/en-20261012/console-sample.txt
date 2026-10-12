@@ -1,0 +1,4 @@
+SC6103 Flight Client; mode=AMO; session=bf5c7b73-abb0-459e-ae48-620ce1bfba96
+
+1 Query route  2 Flight details  3 Reserve seats  4 Monitor seats  5 Set airfare  6 Increase airfare  0 Exit
+Select an option: 

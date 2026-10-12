@@ -37,10 +37,11 @@ class MonitorTests(unittest.TestCase):
                   (0.8, callback(8), PEER), (0.9, callback(7), PEER)]
         invoker = make_invoker(self.clock, events)
         monitor_until_expiry(invoker, self.accepted(pending=pending))
-        updates = [line for line in self.output.getvalue().splitlines() if "座位更新" in line]
+        updates = [line for line in self.output.getvalue().splitlines() if "Seat update" in line]
         self.assertEqual(len(updates), 2)
-        self.assertIn("序号 4", updates[0])
-        self.assertIn("序号 8", updates[1])
+        self.assertIn("sequence 4", updates[0])
+        self.assertIn("sequence 8", updates[1])
+        self.assertTrue(self.output.getvalue().isascii())
         self.assertEqual(self.clock.now, 101)
         self.assertEqual(invoker.transport.sent, [])
 
@@ -49,20 +50,22 @@ class MonitorTests(unittest.TestCase):
                                            (0.5, b"broken", PEER), (0.9, monitor_reply(1000), PEER)])
         monitor_until_expiry(invoker, self.accepted())
         self.assertEqual(self.clock.now, 101)
-        self.assertNotIn("座位更新", self.output.getvalue())
+        self.assertNotIn("Seat update", self.output.getvalue())
 
     def test_no_events_expires(self):
         invoker = make_invoker(self.clock)
         monitor_until_expiry(invoker, self.accepted())
         self.assertEqual(invoker.transport.waits, [1000])
         self.assertEqual(self.clock.now, 101)
+        self.assertIn("Monitoring ended for flight 1001.", self.output.getvalue())
+        self.assertTrue(self.output.getvalue().isascii())
 
     def test_zero_or_already_expired_never_receives_or_displays_pending(self):
         for deadline in (99, 100):
             invoker = make_invoker(self.clock)
             monitor_until_expiry(invoker, self.accepted(deadline, decode_message(callback())))
             self.assertEqual(invoker.transport.waits, [])
-        self.assertNotIn("座位更新", self.output.getvalue())
+        self.assertNotIn("Seat update", self.output.getvalue())
 
     def test_confirmation_timestamp_not_menu_time(self):
         invoker = make_invoker(self.clock, [(0.2, monitor_reply(500), PEER)])
@@ -77,7 +80,7 @@ class MonitorTests(unittest.TestCase):
     def test_callback_arriving_after_deadline_not_shown(self):
         invoker = make_invoker(self.clock, [(1.001, callback(), PEER)])
         monitor_until_expiry(invoker, self.accepted())
-        self.assertNotIn("座位更新", self.output.getvalue())
+        self.assertNotIn("Seat update", self.output.getvalue())
         self.assertEqual(self.clock.now, 101)
 
     def test_unknown_registration_cannot_start_monitor(self):

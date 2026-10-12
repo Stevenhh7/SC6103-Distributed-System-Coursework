@@ -1,4 +1,4 @@
-"""B runner 的端口检查及只读就绪探测；不增加生产接口。"""
+"""Check experiment ports and server readiness using a read-only flight query."""
 
 import argparse
 import json

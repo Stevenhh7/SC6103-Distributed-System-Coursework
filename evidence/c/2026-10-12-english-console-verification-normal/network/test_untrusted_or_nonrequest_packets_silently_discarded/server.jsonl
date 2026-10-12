@@ -1,0 +1,12 @@
+{"event":"SERVER_READY","nanoTime":5753593034900,"bind":"127.0.0.1","port":51463,"mode":"AMO"}
+{"event":"DROP_MALFORMED","nanoTime":5753615132300,"peer":"/127.0.0.1:51464","bytes":20,"reason":"Truncated header"}
+{"event":"DROP_MALFORMED","nanoTime":5753696877400,"peer":"/127.0.0.1:51464","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_MALFORMED","nanoTime":5753790526700,"peer":"/127.0.0.1:51464","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_MALFORMED","nanoTime":5753884487200,"peer":"/127.0.0.1:51464","bytes":36,"reason":"Invalid request identity or mode"}
+{"event":"DROP_MALFORMED","nanoTime":5753977630400,"peer":"/127.0.0.1:51464","bytes":36,"reason":"Invalid request identity or mode"}
+{"event":"DROP_MALFORMED","nanoTime":5754070517300,"peer":"/127.0.0.1:51464","bytes":36,"reason":"Unsupported version/type or zero session"}
+{"event":"DROP_NON_REQUEST","nanoTime":5754166951900,"peer":"/127.0.0.1:51464","messageType":"REPLY"}
+{"event":"REQUEST_RECEIVED","nanoTime":5754257974400,"mode":"AMO","sessionId":"c4fe9c0c-ab7d-4dde-a07b-18b4065610bf","requestId":8,"operation":2,"peer":"/127.0.0.1:51464","encodedHex":"01010002c4fe9c0cab7d4ddea07b18b4065610bf000000080000020000000004000003e9"}
+{"event":"BUSINESS_EXECUTED","nanoTime":5754266400700,"mode":"AMO","sessionId":"c4fe9c0c-ab7d-4dde-a07b-18b4065610bf","requestId":8,"operation":2,"peer":"/127.0.0.1:51464","cacheHit":false,"businessExecuted":true,"status":0,"request":"FlightQuery[flightId=1001]","response":"FlightDetails[departure=FlightTime[year=2026, month=10, day=17, hour=9, minute=30], airfare=100.0, availableSeats=10]"}
+{"event":"HISTORY_SAVED","nanoTime":5754318601000,"mode":"AMO","sessionId":"c4fe9c0c-ab7d-4dde-a07b-18b4065610bf","requestId":8,"operation":2,"peer":"/127.0.0.1:51464","status":0}
+{"event":"REPLY_SENT","nanoTime":5754319534400,"mode":"AMO","sessionId":"c4fe9c0c-ab7d-4dde-a07b-18b4065610bf","requestId":8,"operation":2,"peer":"/127.0.0.1:51464","cacheHit":false,"encodedHex":"01020002c4fe9c0cab7d4ddea07b18b4065610bf00000008000002000000001c000007ea0000000a00000011000000090000001e42c800000000000a"}

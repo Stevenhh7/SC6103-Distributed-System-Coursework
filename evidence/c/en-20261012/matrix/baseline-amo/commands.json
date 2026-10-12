@@ -1,0 +1,53 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "50121",
+      "--semantics",
+      "amo"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "client",
+      "--port",
+      "50121",
+      "--semantics",
+      "amo",
+      "--session-id",
+      "097a8875-d3b4-4da5-af1c-9bd5f998ba15",
+      "--case",
+      "baseline",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\matrix\\baseline-amo\\client.jsonl"
+    ]
+  }
+]

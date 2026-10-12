@@ -1,0 +1,72 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "51422",
+      "--semantics",
+      "amo"
+    ]
+  },
+  {
+    "name": "proxy",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-u",
+      "-m",
+      "experiments.udp_loss_proxy",
+      "--listen-port",
+      "51423",
+      "--server-port",
+      "51422",
+      "--session-id",
+      "ce2d8671-774a-4aa4-a8b1-5b6fa628ee8e",
+      "--request-id",
+      "2",
+      "--drop",
+      "requests"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "client",
+      "--port",
+      "51423",
+      "--semantics",
+      "amo",
+      "--session-id",
+      "ce2d8671-774a-4aa4-a8b1-5b6fa628ee8e",
+      "--case",
+      "reply_loss_reserve",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\matrix\\all_request_loss-amo\\client.jsonl"
+    ]
+  }
+]

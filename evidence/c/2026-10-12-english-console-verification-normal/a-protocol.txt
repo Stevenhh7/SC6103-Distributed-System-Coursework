@@ -1,0 +1,20 @@
+PASS normative_route_request
+PASS normative_route_reply
+PASS normative_detail_reply
+PASS normative_error_reply
+PASS normative_monitor
+PASS normative_callback
+PASS normative_mode_error_echo
+PASS all_six_requests_and_signed_business_values
+PASS strict_utf8_and_byte_length
+PASS every_truncation_rejected
+PASS offset_length_not_entire_buffer
+PASS identity_errors_cannot_reply
+PASS trusted_bad_header_correlates_error
+PASS oversize_limit_before_body
+PASS negative_string_length_and_body_trailing_bytes
+PASS unknown_operation_and_error_decode
+PASS success_body_validation
+PASS invalid_reply_date_fare_counts_and_callback
+PASS outgoing_identity_bodylength_and_error_text
+ProtocolSelfTest: 19 passed

@@ -30,8 +30,9 @@ def run_case(invoker: Invoker, case_name: str) -> None:
         raise ValueError("--case requires --flight-id from the server seed manifest")
     if case_name == "baseline" and (options.source is None or options.destination is None):
         raise ValueError("baseline requires --source and --destination")
-    print(f"实验 {case_name}，模式 {invoker.config.semantics.name}，session={invoker.session_id}")
-    print("每例开始前由 B 重启服务端复位；以下只记录实际结果，执行次数须结合 A 的日志。")
+    print(f"Experiment {case_name}; mode={invoker.config.semantics.name}; session={invoker.session_id}")
+    print("Restart the server before each case to reset its state. The results below are observed "
+          "results; review A's server logs for business execution counts.")
     record("CASE_START", case=case_name, mode=invoker.config.semantics.name,
            sessionId=str(invoker.session_id), flightId=options.flight_id,
            parameters=asdict(options), timeoutMs=invoker.config.timeout_ms,
@@ -55,12 +56,14 @@ def run_case(invoker: Invoker, case_name: str) -> None:
                mode=invoker.config.semantics.name, allConfirmed=bool(operations_ok and after_ok),
                reason=failure_reason)
         if not operations_ok or not after_ok:
-            raise ExperimentFailure(failure_reason or "本例含错误或未知结果；请保留日志并结合服务端状态分析")
+            raise ExperimentFailure(failure_reason or
+                                    "Case contains errors or unknown results; preserve the logs "
+                                    "and compare the server state.")
 
     if case_name.startswith(("request_loss_", "reply_loss_")):
         # 一次初态查询后才写入，故新进程写操作为 ID=2；先打印便于核对 A 的选择器。
         target = RequestKey(invoker.session_id, invoker.next_request_id + 1)
-        print(f"写操作故障目标：{target.clientSessionId}:{target.requestId}", flush=True)
+        print(f"Write fault target: {target.clientSessionId}:{target.requestId}", flush=True)
         if case_name == "request_loss_reserve":
             if invoker.config.drop_first_request not in (None, target):
                 raise ValueError("--drop-first-request must match this case's write request key")
@@ -71,7 +74,7 @@ def run_case(invoker: Invoker, case_name: str) -> None:
     if not ok:
         record("CASE_END", case=case_name, sessionId=str(invoker.session_id),
                mode=invoker.config.semantics.name, allConfirmed=False, reason="initial_query_failed")
-        raise ExperimentFailure("初态查询未成功，已停止本例，未发起写操作")
+        raise ExperimentFailure("Initial state query failed; case stopped without sending a write operation")
 
     if case_name in ("baseline", "monitor"):
         if case_name == "baseline":
@@ -84,11 +87,13 @@ def run_case(invoker: Invoker, case_name: str) -> None:
             for label, operation, body in steps:
                 _, ok = call(label, operation, body)
                 if not ok:
-                    finish_case(False, f"{label} 未成功确认，已停止后续写操作并查询终态")
+                    finish_case(False, f"{label} was not successfully confirmed; remaining write "
+                                "operations were stopped and the final state was queried")
         outcome, ok = call("monitor", Operation.MONITOR_SEATS,
                            MonitorRegistration(options.flight_id, options.monitor_seconds))
         if not ok:
-            finish_case(False, "监控未获成功确认，已查询终态")
+            finish_case(False, "Monitor registration was not successfully confirmed; "
+                        "the final state was queried")
         monitor_until_expiry(invoker, accepted_monitor(outcome))
     else:
         if case_name.endswith("reserve"):
@@ -100,4 +105,5 @@ def run_case(invoker: Invoker, case_name: str) -> None:
         _, ok = call("mutation", operation, body)
         # 即使写操作未知也只查询，不换 ID 再做一次写操作。
     finish_case(ok)
-    print("本例调用已结束；ALO/AMO 执行次数、双监控和航班隔离仍需按实验步骤核对。")
+    print("Case calls finished. Verify ALO/AMO business execution counts, dual monitors, "
+          "and flight isolation using the experiment steps.")

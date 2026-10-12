@@ -43,31 +43,34 @@ def build_parser() -> argparse.ArgumentParser:
 
 def run_menu(invoker: Invoker) -> None:
     """监控接收期间阻塞菜单；输入错误返回菜单，EOF/Ctrl+C 交 main 清理。"""
-    print(f"SC6103 航班客户端；模式 {invoker.config.semantics.name}；session={invoker.session_id}")
+    print(f"SC6103 Flight Client; mode={invoker.config.semantics.name}; session={invoker.session_id}")
     while True:
-        print("\n1 航线查询  2 航班详情  3 订座  4 监控余座  5 设置票价  6 增加票价  0 退出")
-        choice = input("请选择：").strip()
+        print("\n1 Query route  2 Flight details  3 Reserve seats  4 Monitor seats  "
+              "5 Set airfare  6 Increase airfare  0 Exit")
+        choice = input("Select an option: ").strip()
         if choice == "0":
             return
         try:
             operation = Operation(int(choice))
             if operation == Operation.QUERY_ROUTE:
-                body = RouteQuery(location(input("出发地：")), location(input("目的地：")))
+                body = RouteQuery(location(input("Source: ")), location(input("Destination: ")))
             else:
-                flight_id = positive_int(int(input("航班 ID：")))
+                flight_id = positive_int(int(input("Flight ID: ")))
                 if operation == Operation.QUERY_FLIGHT:
                     body = FlightQuery(flight_id)
                 elif operation == Operation.RESERVE_SEATS:
-                    body = Reservation(flight_id, positive_int(int(input("订座数量："))))
+                    body = Reservation(flight_id, positive_int(int(input("Seats to reserve: "))))
                 elif operation == Operation.MONITOR_SEATS:
-                    body = MonitorRegistration(flight_id, positive_int(int(input("监控秒数 (1..3600)：")), 3600))
+                    body = MonitorRegistration(flight_id, positive_int(
+                        int(input("Monitor duration in seconds (1..3600): ")), 3600))
                 elif operation == Operation.SET_AIRFARE:
-                    body = SetAirfare(flight_id, price(float(input("新票价 (SGD)："))))
+                    body = SetAirfare(flight_id, price(float(input("New airfare (SGD): "))))
                 else:
-                    body = IncreaseAirfare(flight_id, price(float(input("增加金额 (SGD)：")), positive=True))
+                    body = IncreaseAirfare(flight_id, price(
+                        float(input("Amount to increase (SGD): ")), positive=True))
             outcome = invoker.invoke(operation, body)
         except ValueError as exc:
-            print(f"输入错误：{exc}")
+            print(f"Input error: {exc}")
             continue
         if show_outcome(outcome) and operation == Operation.MONITOR_SEATS:
             monitor_until_expiry(invoker, accepted_monitor(outcome))
@@ -123,13 +126,14 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             run_menu(invoker)
         return 0
     except EOFError:
-        print("\n输入结束，客户端已退出。")
+        print("\nEnd of input; client exited.")
         return 0
     except KeyboardInterrupt:
-        print("\n已中断；已发送但未确认的操作可能已执行，请查询状态。")
+        print("\nInterrupted. Sent but unconfirmed operations may have executed; query the current state.")
         return 130
     except (OSError, SessionExhaustedError, ExperimentFailure, ValueError) as exc:
-        print(f"客户端结束：{exc}。已发送但未确认的操作结果可能未知。", file=sys.stderr)
+        print(f"Client stopped: {exc}. Sent but unconfirmed operations may have an unknown result.",
+              file=sys.stderr)
         record("CLIENT_ERROR", reason=str(exc))
         return 1
     finally:

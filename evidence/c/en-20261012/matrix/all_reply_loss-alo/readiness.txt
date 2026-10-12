@@ -1,0 +1,1 @@
+{"event": "SERVER_READY", "sessionId": "afa144e4-4428-41ec-8f8b-25e9466870b5", "requestId": 1, "attempts": 1, "flightId": 1001, "availableSeats": 10, "airfare": 100.0}

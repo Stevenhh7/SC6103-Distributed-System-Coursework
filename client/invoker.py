@@ -63,7 +63,7 @@ class Invoker:
     def invoke(self, operation: int, body: RequestBody) -> CallOutcome:
         """成功/业务错误返回 Reply；耗尽返回结果未知，绝不创建新 ID 重做写操作。"""
         if self.next_request_id > MAX_REQUEST_ID:
-            raise SessionExhaustedError("requestId 已用尽；请退出并以新的 session UUID 重启客户端")
+            raise SessionExhaustedError("requestId exhausted; exit and restart with a new session UUID")
         key = RequestKey(self.session_id, self.next_request_id)
         header = Header(VERSION, MessageType.REQUEST, operation, self.session_id,
                         key.requestId, Status.OK, self.config.semantics,

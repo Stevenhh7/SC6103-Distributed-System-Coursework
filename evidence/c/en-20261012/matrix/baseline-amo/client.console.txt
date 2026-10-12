@@ -1,0 +1,32 @@
+Experiment baseline; mode=AMO; session=097a8875-d3b4-4da5-af1c-9bd5f998ba15
+Restart the server before each case to reset its state. The results below are observed results; review A's server logs for business execution counts.
+
+[before]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:1; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 10
+
+[route]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:2; attempts: 1
+Matching flights: 1001, 1002
+
+[reserve]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:3; attempts: 1
+Reservation successful: flight 1001, available seats after this execution: 9
+
+[set]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:4; attempts: 1
+Airfare updated: flight 1001, total airfare: 120.00 SGD
+
+[increase]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:5; attempts: 1
+Airfare updated: flight 1001, total airfare: 140.00 SGD
+
+[monitor]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:6; attempts: 1
+Monitor confirmed: flight 1001, remaining 1993 ms; menu input is paused during monitoring.
+Monitoring ended for flight 1001.
+
+[after (read-only)]
+Request 097a8875-d3b4-4da5-af1c-9bd5f998ba15:7; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 140.00 SGD; available seats 9
+Case calls finished. Verify ALO/AMO business execution counts, dual monitors, and flight isolation using the experiment steps.

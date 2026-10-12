@@ -1,4 +1,4 @@
-"""B 受控单例取证核对；读取 C 原日志，不修改客户端或推断 A 执行次数。"""
+"""Validate controlled-case evidence from client logs without inferring server execution counts."""
 
 import argparse
 import json

@@ -1,0 +1,35 @@
+test_amo_exact_replay_conflicts_and_session_isolation (experiments.test_java_integration.JavaIntegrationTests.test_amo_exact_replay_conflicts_and_session_isolation) ... ok
+test_business_error_and_old_query_snapshots_replayed (experiments.test_java_integration.JavaIntegrationTests.test_business_error_and_old_query_snapshots_replayed) ... ok
+test_chinese_route_and_business_errors (experiments.test_java_integration.JavaIntegrationTests.test_chinese_route_and_business_errors) ... ok
+test_codec_cross_language_both_directions (experiments.test_java_integration.JavaIntegrationTests.test_codec_cross_language_both_directions) ... ok
+test_dual_monitor_callback_identity_and_no_duplicate_amo_event (experiments.test_java_integration.JavaIntegrationTests.test_dual_monitor_callback_identity_and_no_duplicate_amo_event) ... ERROR
+test_flight_isolation_and_expiry_stops_callback (experiments.test_java_integration.JavaIntegrationTests.test_flight_isolation_and_expiry_stops_callback) ... ok
+test_lost_reservation_reply_still_delivers_callback (experiments.test_java_integration.JavaIntegrationTests.test_lost_reservation_reply_still_delivers_callback) ... ok
+test_malformed_packets_classification_and_no_side_effect (experiments.test_java_integration.JavaIntegrationTests.test_malformed_packets_classification_and_no_side_effect) ... ok
+test_mode_error_echo_and_server_survives (experiments.test_java_integration.JavaIntegrationTests.test_mode_error_echo_and_server_survives) ... ok
+test_monitor_remaining_replay_replacement_expiry (experiments.test_java_integration.JavaIntegrationTests.test_monitor_remaining_replay_replacement_expiry) ... ok
+test_real_c_invoker_callback_before_retried_confirmation (experiments.test_java_integration.JavaIntegrationTests.test_real_c_invoker_callback_before_retried_confirmation) ... ok
+test_untrusted_or_nonrequest_packets_silently_discarded (experiments.test_java_integration.JavaIntegrationTests.test_untrusted_or_nonrequest_packets_silently_discarded) ... ok
+
+======================================================================
+ERROR: test_dual_monitor_callback_identity_and_no_duplicate_amo_event (experiments.test_java_integration.JavaIntegrationTests.test_dual_monitor_callback_identity_and_no_duplicate_amo_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Stevenhh\Desktop\NTU\First Trimester\SC6103 Distributed Systems\course\SC6103-Distributed-System-Coursework\experiments\test_java_integration.py", line 174, in test_dual_monitor_callback_identity_and_no_duplicate_amo_event
+    with self.server() as port:
+         ~~~~~~~~~~~^^
+  File "C:\Python313\Lib\contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "C:\Users\Stevenhh\Desktop\NTU\First Trimester\SC6103 Distributed Systems\course\SC6103-Distributed-System-Coursework\experiments\test_java_integration.py", line 69, in server
+    process=owner.start('server',command);owner.ready(process,'server','SERVER_READY')
+  File "C:\Users\Stevenhh\Desktop\NTU\First Trimester\SC6103 Distributed Systems\course\SC6103-Distributed-System-Coursework\experiments\run_suite.py", line 62, in start
+    stderr = (self.folder / (name + '.stderr.txt')).open('w', encoding='utf-8')
+  File "C:\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\network\\test_dual_monitor_callback_identity_and_no_duplicate_amo_event\\server.stderr.txt'
+
+----------------------------------------------------------------------
+Ran 12 tests in 11.815s
+
+FAILED (errors=1)

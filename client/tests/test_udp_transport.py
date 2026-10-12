@@ -107,8 +107,8 @@ class UdpTests(unittest.TestCase):
                 output = io.StringIO()
                 with redirect_stdout(output):
                     monitor_until_expiry(invoker, accepted_monitor(outcome))
-                self.assertIn("序号 3", output.getvalue())
-                self.assertIn("序号 4", output.getvalue())
+                self.assertIn("sequence 3", output.getvalue())
+                self.assertIn("sequence 4", output.getvalue())
             finally:
                 invoker.close()
         self.assertEqual(observed[0][0], observed[1][0])

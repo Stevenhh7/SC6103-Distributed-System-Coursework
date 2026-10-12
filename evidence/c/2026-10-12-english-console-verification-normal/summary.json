@@ -1,0 +1,81 @@
+[
+  {
+    "name": "a-protocol",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ProtocolSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "a-semantics",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.SemanticsSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "b-business",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.BusinessSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "b-monitor",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.MonitorSelfTest"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "c-client",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "client/tests",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "experiment-tools",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "experiments.test_analyze_results",
+      "experiments.test_runtime_check",
+      "experiments.test_udp_loss_proxy",
+      "experiments.test_monitor_evidence",
+      "experiments.test_server_evidence",
+      "-v"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "java-integration",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "experiments.test_java_integration",
+      "-v"
+    ],
+    "exit_code": 1
+  }
+]

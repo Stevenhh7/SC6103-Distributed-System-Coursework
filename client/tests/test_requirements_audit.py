@@ -128,9 +128,9 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result.pending_callback.updateSequence, 2)
         monitor_until_expiry(invoker, accepted_monitor(result))
         self.assertAlmostEqual(self.clock.now, 101.45)
-        self.assertIn("序号 2", self.output.getvalue())
-        self.assertIn("序号 3", self.output.getvalue())
-        self.assertNotIn("序号 4", self.output.getvalue())
+        self.assertIn("sequence 2", self.output.getvalue())
+        self.assertIn("sequence 3", self.output.getvalue())
+        self.assertNotIn("sequence 4", self.output.getvalue())
 
     def test_expired_replayed_confirmation_discards_pending_callback(self):
         invoker = make_invoker(self.clock, [(0.1, callback(), PEER), (1.2, monitor_reply(0), PEER)])
@@ -139,7 +139,7 @@ class AuditTests(unittest.TestCase):
         wait_count = len(invoker.transport.waits)
         monitor_until_expiry(invoker, accepted_monitor(result))
         self.assertEqual(len(invoker.transport.waits), wait_count)
-        self.assertNotIn("座位更新", self.output.getvalue())
+        self.assertNotIn("Seat update", self.output.getvalue())
 
 
 class TransportAuditTests(unittest.TestCase):

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "a-protocol",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ProtocolSelfTest"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\a-protocol.txt"
+  },
+  {
+    "name": "a-semantics",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.SemanticsSelfTest"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\a-semantics.txt"
+  },
+  {
+    "name": "b-business",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.BusinessSelfTest"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\b-business.txt"
+  },
+  {
+    "name": "b-monitor",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.MonitorSelfTest"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\b-monitor.txt"
+  },
+  {
+    "name": "c-client",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "client/tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\c-client.txt"
+  },
+  {
+    "name": "experiment-tools",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "experiments.test_analyze_results",
+      "experiments.test_runtime_check",
+      "experiments.test_udp_loss_proxy",
+      "experiments.test_monitor_evidence",
+      "experiments.test_server_evidence",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal\\experiment-tools.txt"
+  },
+  {
+    "name": "java-integration",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "experiments.test_java_integration",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\java-integration.txt"
+  },
+  {
+    "name": "udp-matrix",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "experiments.run_suite",
+      "--output",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\matrix"
+    ],
+    "exit_code": 0,
+    "log": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\udp-matrix.txt"
+  }
+]

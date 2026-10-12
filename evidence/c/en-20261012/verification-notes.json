@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-12",
+  "prior_suites": "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\2026-10-12-english-console-verification-normal",
+  "reused_passed_suites": [
+    "a-protocol",
+    "a-semantics",
+    "b-business",
+    "b-monitor",
+    "c-client",
+    "experiment-tools"
+  ],
+  "rerun_reason": "Windows path length error creating server.stderr.txt in the previous integration evidence directory",
+  "rerun_suites": [
+    "java-integration"
+  ],
+  "new_suites": [
+    "udp-matrix"
+  ],
+  "scope": "200 existing tests plus 16 local UDP cases; not a three-computer test"
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\server\\build\\classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "60082",
+      "--semantics",
+      "alo",
+      "--drop-first-reply",
+      "de795267-dd53-4210-be9a-d444bcecf5a2:2"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "C:\\Python313\\python.exe",
+      "-m",
+      "client",
+      "--port",
+      "60082",
+      "--semantics",
+      "alo",
+      "--session-id",
+      "de795267-dd53-4210-be9a-d444bcecf5a2",
+      "--case",
+      "reply_loss_set",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "C:\\Users\\Stevenhh\\Desktop\\NTU\\First Trimester\\SC6103 Distributed Systems\\course\\SC6103-Distributed-System-Coursework\\evidence\\c\\en-20261012\\matrix\\reply_loss_set-alo\\client.jsonl"
+    ]
+  }
+]

@@ -19,6 +19,23 @@ python -m client --server 127.0.0.1 --port 6789 --semantics amo
 
 --check 只检查配置和装配，不解析 DNS、不打开 socket，不代表业务或网络联调通过。测试采用模拟传输和真实 127.0.0.1 UDP 应答器；应答器仅在测试线程运行。
 
+## Console output language
+
+All menu prompts, operation results, input errors, monitoring messages, and client experiment messages are in English. Restart any running client processes after updating the source files. Menu numbers, input values, and CLI options stay the same; UTF-8 location data is preserved in requests and evidence logs.
+
+| Event | Example console output |
+|---|---|
+| Menu input | `Select an option:` |
+| Flight details | `Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 10` |
+| Reservation | `Reservation successful: flight 1001, available seats after this execution: 9` |
+| Airfare change | `Airfare updated: flight 1001, total airfare: 120.00 SGD` |
+| Monitor confirmation | `Monitor confirmed: flight 1001, remaining 60000 ms; menu input is paused during monitoring.` |
+| Callback | `Seat update: flight 1001, available seats 9, sequence 1` |
+| Monitor expiry | `Monitoring ended for flight 1001.` |
+| Unknown result | `No confirmation received; execution result is unknown.` |
+
+Verified on 2026-10-12 with Java 17.0.13 and Python 3.13.3: 200 existing tests and 16 real local UDP cases passed. See the [verification summary](../evidence/c/en-20261012/summary.json) and [verification notes](../evidence/c/en-20261012/verification-notes.json) for the completed checks and their evidence locations.
+
 ## 文件与调用关系
 
 | 文件 | 职责 |
@@ -41,7 +58,7 @@ python -m client --server 127.0.0.1 --port 6789 --semantics amo
 - 发送也有超时上限，不继承上次接收缩短后的超时值；发送超时消耗本次尝试，继续等剩余时间，耗尽同样返回结果未知。
 - 只接收来自解析后的服务端 IP/端口、且身份/op/mode 匹配的回复。业务错误立即结束；status=7 的模式错误也能正确显示。
 - 无关、畸形、迟到报文和回调不会重置当前尝试的绝对截止时间。
-- 耗尽显示“未获得确认，执行结果未知”。不自动换新 ID 再订座/加价。可以显式发起新的查询确认状态。
+- 耗尽显示“No confirmation received; execution result is unknown.”。不自动换新 ID 再订座/加价。可以显式发起新的查询确认状态。
 - requestId 达到 i32 上限后拒绝新调用并退出；以**新的 UUID**重启。正常启动自动生成 UUID v4；固定 UUID 只供受控实验使用。
 - 首次监控成功确认的接收时间 + remainingMillis/1000 为本地截止时间；重复确认不续期，0 立即结束。
 - 确认前仅暂存当前登记最高序号 callback，确认后才显示。监控只显示严格递增序号，不要求从 1 连续开始。错误/最终超时清空暂存。

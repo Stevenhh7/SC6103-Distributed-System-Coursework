@@ -50,13 +50,16 @@ class ClientTests(unittest.TestCase):
         invoker = MenuInvoker()
         inputs = ["1", " 北京 ", "SIN", "2", "1001", "3", "1001", "2", "4", "1001", "1",
                   "5", "1001", "120", "6", "1001", "20", "0"]
-        with patch("builtins.input", side_effect=inputs), patch("client.client.monitor_until_expiry") as monitor:
+        with patch("builtins.input", side_effect=inputs) as user_input, \
+                patch("client.client.monitor_until_expiry") as monitor:
             run_menu(invoker)
         self.assertEqual([int(op) for op, _ in invoker.calls], [1, 2, 3, 4, 5, 6])
         self.assertEqual(invoker.calls[0][1].source, "北京")
         monitor.assert_called_once()
         self.assertEqual(monitor.call_args.args[1].deadline_monotonic, 100.0)
         self.assertIn("120.00 SGD", self.out.getvalue())
+        self.assertTrue(self.out.getvalue().isascii())
+        self.assertTrue(all(call.args[0].isascii() for call in user_input.call_args_list))
 
     def test_invalid_menu_inputs_never_invoke(self):
         invoker = MenuInvoker()
@@ -65,14 +68,16 @@ class ClientTests(unittest.TestCase):
         with patch("builtins.input", side_effect=inputs):
             run_menu(invoker)
         self.assertEqual(invoker.calls, [])
-        self.assertEqual(self.out.getvalue().count("输入错误"), 7)
+        self.assertEqual(self.out.getvalue().count("Input error"), 7)
+        self.assertTrue(self.out.getvalue().isascii())
 
     def test_timeout_text_never_claims_failure_or_auto_retries(self):
         invoker = MenuInvoker()
         invoker.invoke = lambda op, body: CallOutcome(RequestKey(SESSION, 1), None, 5, True, None, None)
         with patch("builtins.input", side_effect=["3", "1001", "1", "0"]):
             run_menu(invoker)
-        self.assertIn("执行结果未知", self.out.getvalue())
+        self.assertIn("execution result is unknown", self.out.getvalue())
+        self.assertTrue(self.out.getvalue().isascii())
 
     def test_check_is_offline_and_closes(self):
         with patch("socket.socket", side_effect=AssertionError("network used")), \
@@ -86,6 +91,8 @@ class ClientTests(unittest.TestCase):
                     patch("client.client.run_menu", side_effect=signal):
                 self.assertEqual(main([]), expected)
                 close.assert_called_once()
+                self.assertTrue(self.out.getvalue().isascii())
+                self.assertTrue(self.err.getvalue().isascii())
 
     def test_invalid_arguments_and_mismatched_selector(self):
         for args in (["--port", "0"], ["--max-attempts", "0"], ["--case", "baseline"],
@@ -95,6 +102,7 @@ class ClientTests(unittest.TestCase):
             with self.subTest(args=args), self.assertRaises(SystemExit) as result:
                 main(args)
             self.assertEqual(result.exception.code, 2)
+        self.assertTrue(self.err.getvalue().isascii())
 
     def test_log_file_is_parseable_actual_events(self):
         # 使用已被 Git 忽略的项目内缓存；兼容系统临时目录不可写的环境。

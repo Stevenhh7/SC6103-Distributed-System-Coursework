@@ -1,0 +1,8 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "java": "java version \"17.0.13\" 2024-10-15 LTS\nJava(TM) SE Runtime Environment (build 17.0.13+10-LTS-268)\nJava HotSpot(TM) 64-Bit Server VM (build 17.0.13+10-LTS-268, mixed mode, sharing)\n",
+  "baseline": "79d2799391ebaa7474bff540c4c2bdd2ad17cc68",
+  "working_tree": " M \"SC6103_\\346\\234\\200\\346\\226\\260\\345\\256\\214\\346\\210\\220\\346\\203\\205\\345\\206\\265\\344\\270\\216\\346\\265\\213\\350\\257\\225\\344\\272\\244\\344\\273\\230\\346\\214\\207\\345\\215\\227_20261012.md\"\n M client/README.md\n M client/TODO.md\n M client/client.py\n M client/experiments.py\n M client/input_validation.py\n M client/invoker.py\n M client/monitor.py\n M client/presentation.py\n M client/tests/test_client.py\n M client/tests/test_experiments.py\n M client/tests/test_monitor.py\n M client/tests/test_requirements_audit.py\n M client/tests/test_udp_transport.py\n M \"experiments/B_\\345\\244\\215\\346\\237\\245\\344\\270\\216\\351\\230\\237\\345\\217\\213\\350\\201\\224\\350\\260\\203\\350\\256\\241\\345\\210\\222.md\"\n M experiments/analyze_results.py\n M experiments/demo_steps.md\n M experiments/runtime_check.py\n?? evidence/c/2026-10-12-english-console-verification-normal/\n?? evidence/c/2026-10-12-english-console-verification/\n?? evidence/c/en-20261012/\n?? evidence/demo/\n",
+  "scope": "Real loopback UDP, not multiple computers"
+}

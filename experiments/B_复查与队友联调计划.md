@@ -120,7 +120,7 @@ python -m client --server 127.0.0.1 --semantics amo --case monitor --flight-id 1
 python -m client --server 127.0.0.1 --semantics amo --log-file evidence/b/joint/writer.jsonl
 ```
 
-必须等 M1 显示“监控已确认”再订座。首次应收到航班1001、余座9、seq1。callback 使用 M1 的登记 session/requestId，不是 W 的订座身份。
+必须等 M1 显示“Monitor confirmed”再订座。首次应收到“Seat update: flight 1001, available seats 9, sequence 1”。callback 使用 M1 的登记 session/requestId，不是 W 的订座身份。
 
 | 测试 | 谁操作 | 具体步骤 / 验收 |
 |---|---|---|
