@@ -1,0 +1,17 @@
+{
+  "case": "baseline",
+  "mode": "amo",
+  "session": "b46cb376-3772-48f8-b058-f2e459125e70",
+  "flight_id": 1001,
+  "result": "PASSED_LOCAL_UDP",
+  "evidence": "evidence/a/final-java17/matrix/baseline-amo",
+  "initial_seats": 10,
+  "final_seats": 9,
+  "initial_fare": 100.0,
+  "final_fare": 140.0,
+  "mutation_attempts": "",
+  "client_unknown": false,
+  "notes": "Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.",
+  "business_executions": "",
+  "cache_hits": ""
+}

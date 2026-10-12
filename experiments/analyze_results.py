@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 from pathlib import Path
 from uuid import UUID
 
@@ -156,6 +157,13 @@ def analyze(events, case, mode, session, client_exit, proxy_events=()):
         monitor_reply = next(e for e in named("REPLY") if e["requestId"] == monitor_id)
         require(events.index(monitor_reply) < events.index(one("MONITOR_START")) < events.index(one("MONITOR_END"))
                 < events.index(created[-1]), "Missing monitor completion before after-query")
+        start_event, end_event = one("MONITOR_START"), one("MONITOR_END")
+        values = (start_event.get("monotonic"), start_event.get("deadline"), end_event.get("monotonic"))
+        require(all(type(value) in (int, float) and math.isfinite(value) for value in values),
+                "Monitor timing fields must be finite numbers")
+        started, deadline, ended = values
+        require(ended >= started and ended + 1e-6 >= deadline,
+                "Monitor ended before its deadline")
         require(not named("CALLBACK"), "Unexpected callback in quiet controlled case")
     if unknown:
         drops = [e for e in proxy_events if e.get("event") == "DROP_ALL_TARGET"]

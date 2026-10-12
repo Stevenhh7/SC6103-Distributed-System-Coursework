@@ -1,0 +1,55 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "49977",
+      "--semantics",
+      "amo",
+      "--drop-first-reply",
+      "1e62b35b-c289-4a06-aaa4-2040b50caa82:2"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "client",
+      "--port",
+      "49977",
+      "--semantics",
+      "amo",
+      "--session-id",
+      "1e62b35b-c289-4a06-aaa4-2040b50caa82",
+      "--case",
+      "reply_loss_reserve",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/udp-matrix-01/reply_loss_reserve-amo/client.jsonl"
+    ]
+  }
+]

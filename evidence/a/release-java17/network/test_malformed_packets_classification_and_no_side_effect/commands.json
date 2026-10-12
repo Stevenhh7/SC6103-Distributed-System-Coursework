@@ -1,0 +1,17 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "/private/var/folders/0l/v56cbjgx37j3jc4xwzjq0_tc0000gn/T/sc6103-clean-ujvmcpnl/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "58787",
+      "--semantics",
+      "amo"
+    ]
+  }
+]

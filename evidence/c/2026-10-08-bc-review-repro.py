@@ -36,14 +36,19 @@ def main_review():
         for event in changed[end_index:]:
             if "monotonic" in event:
                 event["monotonic"] -= wait
-        result = analyze(changed, "monitor", mode, SESSION, exit_code, proxy)
+        # 2026-10-10: R2 is fixed; retain the historical probe as a regression.
+        try:
+            analyze(changed, "monitor", mode, SESSION, exit_code, proxy)
+        except EvidenceError:
+            result = {"result": "EARLY_MONITOR_REJECTED"}
+        else:
+            raise AssertionError("Early monitor termination was accepted")
         assert end["monotonic"] < start["deadline"]
-        assert result["result"] == "STATE_VERIFIED_NEEDS_A_LOG_REVIEW"
         log = folder / f"synthetic-early-monitor-{mode}.jsonl"
         log.write_text("\n".join(json.dumps(e, ensure_ascii=False) for e in changed) + "\n",
                        encoding="utf-8")
         records.append(dict(
-            check="synthetic_monitor_ends_before_deadline_is_accepted", mode=mode,
+            check="synthetic_monitor_ends_before_deadline_is_rejected", mode=mode,
             baseline_result=original_result["result"], result=result["result"],
             confirmation_remaining_ms=next(e["body"]["remainingMillis"] for e in changed
                                            if e["event"] == "REPLY" and e["requestId"] == 2),

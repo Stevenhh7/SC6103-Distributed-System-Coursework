@@ -1,0 +1,17 @@
+baseline alo PASSED_LOCAL_UDP
+baseline amo PASSED_LOCAL_UDP
+request_loss_reserve alo PASSED_LOCAL_UDP
+request_loss_reserve amo PASSED_LOCAL_UDP
+reply_loss_reserve alo PASSED_LOCAL_UDP
+reply_loss_reserve amo PASSED_LOCAL_UDP
+reply_loss_increase alo PASSED_LOCAL_UDP
+reply_loss_increase amo PASSED_LOCAL_UDP
+reply_loss_set alo PASSED_LOCAL_UDP
+reply_loss_set amo PASSED_LOCAL_UDP
+all_request_loss alo PASSED_LOCAL_UDP
+all_request_loss amo PASSED_LOCAL_UDP
+all_reply_loss alo PASSED_LOCAL_UDP
+all_reply_loss amo PASSED_LOCAL_UDP
+monitor alo PASSED_LOCAL_UDP
+monitor amo PASSED_LOCAL_UDP
+Evidence: /Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/final-java17/matrix

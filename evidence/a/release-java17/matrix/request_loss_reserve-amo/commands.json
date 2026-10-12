@@ -1,0 +1,53 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "/private/var/folders/0l/v56cbjgx37j3jc4xwzjq0_tc0000gn/T/sc6103-clean-ujvmcpnl/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "65353",
+      "--semantics",
+      "amo"
+    ]
+  },
+  {
+    "name": "client",
+    "command": [
+      "/opt/homebrew/opt/python@3.13/bin/python3.13",
+      "-m",
+      "client",
+      "--port",
+      "65353",
+      "--semantics",
+      "amo",
+      "--session-id",
+      "59add0b3-1a9d-44d3-bae8-6f95ecffc74f",
+      "--case",
+      "request_loss_reserve",
+      "--flight-id",
+      "1001",
+      "--source",
+      "Singapore",
+      "--destination",
+      "Beijing",
+      "--quantity",
+      "1",
+      "--new-price",
+      "120",
+      "--delta",
+      "20",
+      "--monitor-seconds",
+      "2",
+      "--timeout-ms",
+      "1000",
+      "--max-attempts",
+      "5",
+      "--log-file",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/release-java17/matrix/request_loss_reserve-amo/client.jsonl"
+    ]
+  }
+]

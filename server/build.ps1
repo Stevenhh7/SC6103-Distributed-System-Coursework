@@ -8,4 +8,4 @@ if ($taskSources.Count -eq 0) { throw 'No Java source files were found.' }
 New-Item -ItemType Directory -Force -Path $taskOutputDirectory | Out-Null
 & javac --release 17 -encoding UTF-8 -d $taskOutputDirectory @taskSources
 if ($LASTEXITCODE -ne 0) { throw 'Java compilation failed.' }
-Write-Output ("Compiled {0} Java scaffold files into {1}" -f $taskSources.Count, $taskOutputDirectory)
+Write-Output ("Compiled {0} Java source files into {1}" -f $taskSources.Count, $taskOutputDirectory)

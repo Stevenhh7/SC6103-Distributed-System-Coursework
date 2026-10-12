@@ -1,0 +1,19 @@
+[
+  {
+    "name": "server",
+    "command": [
+      "java",
+      "-cp",
+      "/Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/server/build/classes",
+      "flight.ServerMain",
+      "--bind",
+      "127.0.0.1",
+      "--port",
+      "55444",
+      "--semantics",
+      "amo",
+      "--drop-first-reply",
+      "7b7a25c4-e8dd-480c-8110-63a1a6b81723:1"
+    ]
+  }
+]

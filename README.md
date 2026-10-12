@@ -1,56 +1,47 @@
-# SC6103-Distributed-System-Coursework
+# SC6103 Distributed Flight Information System
 
-Java17目标服务端 + Python3.10+客户端，IPv4 UDP航班信息系统。
+Java 17 服务端 + Python 3.10+ 客户端，IPv4 UDP，手工二进制协议 v1.0。
 
-更新时间：2026-10-07。**B的固定数据、六项业务与监控已实现并通过49项独立Java测试；C客户端与独立测试已交付。A的codec、UDP、分派/历史/调用语义仍为占位，因此整套服务尚未进行真实网络联调。** 编译、模拟测试或预期结果不能代表网络通过。
+**2026-10-10：A 通信层已完成，与现有 B/C 模块完成真实本机 UDP 集成。Java 17 运行时下 200 项自动化测试及 16 项网络实验全部通过。三台物理电脑演示尚未执行。**
 
-## 目录与职责
-
-| 目录 | 负责人 | 内容 |
+| 分工 | 成员 | 内容 |
 |---|---|---|
-| [client](client/README.md) | C | Python codec、Invoker、monitor、菜单与实验驱动；自身测试/章节 |
-| [server](server/README.md) | A/B | A协议/通信/语义；B数据/六业务/监控；[服务端待办](server/TODO.md) |
-| [experiments](experiments/cases.md) | B | 种子、复位、用例/结果、全丢代理、runner与三机演示步骤 |
-| [report](report/项目报告.md) | 各自写，B汇总 | B章节已完成、C已交付，A章节与真实联调待补 |
+| A | Zhang Zhiyin | 二进制编解码、UDP、分派、ALO/AMO、丢回复、日志与集成验证 |
+| B | Peng Jinyu | 固定数据、六项业务、订阅监控、原实验工具与业务测试 |
+| C | Ji Chengyu | Python 客户端、重传、回调过滤、菜单与客户端测试 |
 
-现行目录为client/、server/，旧指南client-python/server-java草案不再使用。线上接口仍严格依据v1.0。
+## 启动
 
-## 独立验证与配置检查
+在仓库根目录运行。需要 JDK 17+（包含 javac）与 Python 3.10+，程序无第三方依赖。
 
-从仓库根目录的PowerShell运行，不下载外部库：
-
-```powershell
-python -m client --help
-python -m client --check
-.\server\build.ps1
-.\server\test-b.ps1 -EvidenceFile evidence/b/2026-10-07-b-self-tests.txt
-python -m unittest experiments.test_analyze_results experiments.test_runtime_check experiments.test_udp_loss_proxy -v
-java -cp server/build/classes flight.ServerMain --help
-java -cp server/build/classes flight.ServerMain --check
+```sh
+python3 -c 'from experiments.run_suite import compile_java; compile_java()'
+java -cp server/build/classes flight.ServerMain --bind 0.0.0.0 --port 6789 --semantics amo
 ```
 
-编译使用javac --release17；本次实际JDK25.0.4，JDK17运行环境需最终复核。--check只验证配置/装配，不开socket。Java普通启动当前仍提示A-03未实现；Python菜单与实验已实现，真实Java连接需要A通信层。
+另一终端：
 
-B测试直接调用业务方法，不依赖UDP/C；代理的真实本机UDP自测仅证明故障工具行为。完整接口交接与测试见[B_HANDOFF](server/B_HANDOFF.md)。server/README.md仍有A最初框架说明，B当前状态以这里和交接记录为准。
-
-规划检查，不创建进程、socket或结果记录：
-
-```powershell
-.\experiments\run_suite.ps1 -Case all_reply_loss -Semantics amo -DryRun
+```sh
+python3 -m client --server 127.0.0.1 --port 6789 --semantics amo
 ```
 
-A完成后去掉-DryRun，按[cases.md](experiments/cases.md)逐例执行。runner检查端口和就绪，按请求身份/阶段/状态/attempts与全丢证据验收，保留analysis.json和每例result.csv；真实执行/cacheHit需A日志复核。三人后续安排见[B复查与联调计划](experiments/B_复查与队友联调计划.md)，三机步骤见[demo_steps.md](experiments/demo_steps.md)。
+Windows 将 `python3` 换为 `python`，也可用 `server/build.ps1`；macOS/Linux 可用 `sh server/build.sh`。跨电脑将客户端地址换为服务端实际 IPv4。`--check` 仅检查配置，不代表网络验证。
 
-VS Code打开整个仓库；.vscode/settings.json将server/src设为Java源码根目录，包flight。配置说明见原server/README.md。
+## 复现与证据
 
-## 协作约定与文档
+```sh
+python3 -m experiments.verify_all --matrix
+```
 
-- 每人维护自己模块的测试和报告；B组织实验、集成安排与报告汇总；C保留客户端实验调用驱动。
-- A/B共享同一监控对象；B不操作socket，A不直接修改业务容器。
-- A/C共用一个二进制规范，不另建DTO，不单方改字段。
-- 实验结果来自真实证据，未知值留空；服务端build/与Python缓存不提交。
+每次使用独立输出目录、新进程、新 session 和种子数据；完整命令、客户端/服务端/代理日志与执行次数审计均保留。只运行 16 项实验可用 `python3 -m experiments.run_suite`。
 
-- [项目指南](SC6103_项目指南与三人分工.md)：要求、早期方案和最新分工更新。
-- [详细文件/接口责任表](SC6103_三人详细分工与接口责任表.md)：逐文件归属、接口和独立验收。
-- [接口规范v1.0](SC6103_接口与数据类型规范.md)：权威32字节头/DTO/操作与监控规则。
-- [固定数据](experiments/seed_manifest.md)、[实际结果表](experiments/results.csv)、[报告总稿](report/项目报告.md)。
+- [最终验证证据](evidence/a/README.md)：200 项测试、16 项实验，真实 Java 17 运行环境。
+- [实验结果](evidence/a/release-java17/matrix/results.csv)：实际状态、执行次数与缓存命中。
+- [A 交接](server/A_HANDOFF.md)、[服务端](server/README.md)、[客户端](client/README.md)。
+- [英文 PDF](output/pdf/SC6103_Project_Report.pdf)、[完整英文报告](report/项目报告.md)、[A 章节](report/A_通信与调用语义.md)。
+- [权威协议 v1.0](SC6103_接口与数据类型规范.md)、[固定数据](experiments/seed_manifest.md)。
+- [三机演示](experiments/demo_steps.md)、[提交检查](SUBMISSION_CHECKLIST.md)。
+
+旧指南/审查保留历史记录，其“待 A 实现”等状态以 2026-10-10 更新及最终证据为准。线上字段、操作编号和公共 DTO 未变更；ProtocolException 仅增加本地错误回复元数据。贡献比例由全组核对后填写，不按计划工作点推算。
+
+生成源码审核 ZIP：`python3 tools/package_submission.py`，默认写入仓库外的 `../output/SC6103_Group_Project_Review.zip`。源码包不依赖 Git，含报告、原始证据与文件 SHA256 清单。
