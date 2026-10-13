@@ -1,13 +1,20 @@
 {
   "status": "PASSED",
+  "profile": "source",
   "archive": "SC6103_Source_Code_20261013.zip",
-  "bytes": 11860293,
-  "files": 1191,
-  "sha256": "209543f91e48fa47c9e0bea6a6412a82b22156fdea72e17dcdcda971bae0343d",
+  "bytes": 7775253,
+  "files": 1140,
+  "sha256": "1f28d4314c4af074a1eec093899e1d702492b8a5890c490f04cef49b26bd7996",
+  "markdown_files": 0,
+  "report_files": 0,
   "all_manifest_hashes_verified": true,
-  "all_tested_program_sources_identical": 95,
+  "all_previously_tested_program_sources_identical": 95,
+  "preserved_original_screenshots": 28,
   "fresh_compile": true,
-  "actual_java17_server_help": true,
-  "client_help": true,
-  "lan_audit_from_archive": true
+  "lan_evidence_audit_checks": 94,
+  "real_udp_baseline_modes": [
+    "alo",
+    "amo"
+  ],
+  "baseline_scope": "Actual Java 17 server and Python client over local UDP, all six operations in each mode; not a new three-computer test."
 }

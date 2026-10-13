@@ -7,7 +7,7 @@ Java 17 服务端 + Python 3.10+ 客户端，IPv4 UDP，手工二进制协议 v1
 ## 最终报告与实验材料
 
 - [最终英文报告 PDF](output/pdf/SC6103_Project_Report.pdf)
-- [完整源码 ZIP（NTULearn 源码入口）](output/source/SC6103_Source_Code_20261013.zip)：包含全部 Java/Python 源码、构建说明、测试和原始证据；与下方报告素材包分开。
+- [完整源码 ZIP（NTULearn 源码入口）](output/source/SC6103_Source_Code_20261013.zip)：精简提交包，保留 Java/Python 源码、构建脚本、测试代码、截图和原始证据；移除全部 Markdown、报告及报告素材，仅附英文 README.txt。
 - [可编辑报告 Markdown](report/项目报告.md)
 - [报告与证据下载包](output/report/SC6103_Report_Editable_Package.zip)：包含报告、图片、原始截图、B的三轮日志及报告生成工具。
 - [原始截图与证据索引](evidence/demo/20261012-submitted-screenshots/README.md)：保留全部28张原始截图及SHA-256清单。
@@ -54,6 +54,6 @@ python3 -m experiments.verify_all --matrix
 
 旧指南/审查保留历史记录，其“待 A 实现”等状态以实际实现及最终证据为准。线上字段、操作编号和公共 DTO 未变更；ProtocolException 仅增加本地错误回复元数据。最终报告已填入等分贡献比例、演示编号和时间。个人互评表须由每人单独提交，GitHub上传不等于NTULearn提交。
 
-生成源码审核 ZIP：`python3 tools/package_submission.py`，默认写入仓库外的 `../output/SC6103_Group_Project_Review.zip`。源码包不依赖 Git，含报告、原始证据与文件 SHA256 清单。
+生成精简源码 ZIP：`python3 tools/package_submission.py --profile source`，默认写入仓库外的 `../output/SC6103_Source_Code.zip`。源码包不依赖 Git，保留源码、截图及测试证据，不含 Markdown 和报告。完整审核包可另用 `--profile review` 生成。
 
 本次完整需求审核见 [2026-10-13最终审核与提交指南](FINAL_AUDIT_20261013.md)。
