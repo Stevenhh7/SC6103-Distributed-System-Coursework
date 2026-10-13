@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13",
+  "experiment_date": "2026-10-12",
+  "implementation_baseline": "3241a333b38899ec65fe0ba8e8fcc12001b03967",
+  "report_pages": 23,
+  "report_sha256": "1869ef8c71b2dea2449293bc9eff096e14b523c293941bb7c1b3a86b048c5b7c",
+  "markdown_sha256": "78da1b07d2350e6d70721eacd8ca8eaa71d103fe1d767eb809fd7fb5bb37ff29",
+  "supplied_screenshots": 28,
+  "selected_screenshots": 18,
+  "figure_groups": 11,
+  "contribution_percent": {
+    "Zhang Zhiyin": 33,
+    "Peng Jinyu": 34,
+    "Ji Chengyu": 33,
+    "total": 100
+  },
+  "validation": "Content/evidence hashes, page bounds, bookmarks and visual PDF review",
+  "scope": "Final report and editable material package, not the application source submission ZIP"
+}

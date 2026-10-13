@@ -1,0 +1,338 @@
+[
+  {
+    "supplied_image": 1,
+    "label": "route-flight-errors",
+    "source_filename": "codex-clipboard-1aa3d058-939d-4dec-a4a3-90a55e0c7d55.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/01-route-flight-errors.png",
+    "report_asset": "report/assets/01-route-flight-errors.png",
+    "sha256": "5fd2598876f4f632f2d6fe362343b7249c87baef5607c06dc05b281323f772b5",
+    "pixels": [
+      1320,
+      485
+    ]
+  },
+  {
+    "supplied_image": 2,
+    "label": "insufficient-seats",
+    "source_filename": "codex-clipboard-d46005f5-efab-4575-ac8b-2ba600b7a5d7.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/02-insufficient-seats.png",
+    "report_asset": "report/assets/02-insufficient-seats.png",
+    "sha256": "99a8a8b61681bfe8c6ab75f0af5fbe345d621ae026ddb579eab84a9c12c40de7",
+    "pixels": [
+      1333,
+      356
+    ]
+  },
+  {
+    "supplied_image": 3,
+    "label": "fare-operations",
+    "source_filename": "codex-clipboard-6a7431a1-6c60-489f-b8c7-8d43e18b6576.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/03-fare-operations.png",
+    "report_asset": "report/assets/03-fare-operations.png",
+    "sha256": "7c39426d32889e62c3c2cb04378f9bb846e0422d1bbd8ce08c29cc67c39d2dcd",
+    "pixels": [
+      1262,
+      514
+    ]
+  },
+  {
+    "supplied_image": 4,
+    "label": "server-basic",
+    "source_filename": "codex-clipboard-523e2f72-cf34-44b4-9565-910ff4c20154.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/04-server-basic.jpg",
+    "report_asset": null,
+    "sha256": "9f8fa56cd8f856ecb0436de70b8ff0b116660b625bc2bfd8333506d9beb0982e",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 5,
+    "label": "dual-monitor-C",
+    "source_filename": "codex-clipboard-a9ab5b12-b3a3-4085-974c-84314101e486.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/05-dual-monitor-C.png",
+    "report_asset": "report/assets/05-dual-monitor-C.png",
+    "sha256": "3206199ee0dfe97de664b45223f6cc8452dab7e25aafc56e0b312085130c9d46",
+    "pixels": [
+      1233,
+      258
+    ]
+  },
+  {
+    "supplied_image": 6,
+    "label": "dual-writer-C",
+    "source_filename": "codex-clipboard-fdf3dde7-0efc-4fd6-ae0b-29f0c80b680a.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/06-dual-writer-C.png",
+    "report_asset": null,
+    "sha256": "445501b64822824908ddb1b4746d146d24264368bc3ac3e7b6016c8a2ca5f54b",
+    "pixels": [
+      1303,
+      408
+    ]
+  },
+  {
+    "supplied_image": 7,
+    "label": "dual-monitor-B",
+    "source_filename": "codex-clipboard-17b43723-0b2a-4816-b6a2-7aca333cdf29.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/07-dual-monitor-B.png",
+    "report_asset": "report/assets/07-dual-monitor-B.png",
+    "sha256": "78d93cd82dedf5d00d1089063fd4ac64f8f2e09e41e7318c120b2943d9414e07",
+    "pixels": [
+      1431,
+      443
+    ]
+  },
+  {
+    "supplied_image": 8,
+    "label": "server-dual",
+    "source_filename": "codex-clipboard-076601f5-359b-488b-a7da-42e39da78e01.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/08-server-dual.jpg",
+    "report_asset": "report/assets/08-server-dual.jpg",
+    "sha256": "965d1bf9e3781f77d3e1fe55b114613dfb1611f464589a2cf4bdcb100bd091ba",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 9,
+    "label": "isolation-monitor-C",
+    "source_filename": "codex-clipboard-50dfc4b9-633c-44e1-a254-58cab01a6ad0.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/09-isolation-monitor-C.png",
+    "report_asset": "report/assets/09-isolation-monitor-C.png",
+    "sha256": "6e2dc092fe904586ab73f055b35212505adbaab01652c020b268218878cbc1c9",
+    "pixels": [
+      1276,
+      433
+    ]
+  },
+  {
+    "supplied_image": 10,
+    "label": "isolation-writer-C",
+    "source_filename": "codex-clipboard-28282a24-71e4-4fe2-beae-7f158bb001b0.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/10-isolation-writer-C.png",
+    "report_asset": null,
+    "sha256": "10b90e4ef0ea8c20a3062c592150c7f7cf2e7dbf59b5b28c390fa2f0fa84d0cd",
+    "pixels": [
+      1329,
+      405
+    ]
+  },
+  {
+    "supplied_image": 11,
+    "label": "server-dual-repeat",
+    "source_filename": "codex-clipboard-f7b30854-d280-45cf-8dcb-5ee4d2ea405f.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/11-server-dual-repeat.jpg",
+    "report_asset": null,
+    "sha256": "c271bb1c2d17c44a4813f02895d4ab675356ca4ab65ed0932912c27bce9f14ae",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 12,
+    "label": "server-reserve-ALO",
+    "source_filename": "codex-clipboard-fb379aeb-7eb8-40ca-aeb0-2e628b68cb03.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/12-server-reserve-ALO.jpg",
+    "report_asset": null,
+    "sha256": "12d3fd2d0fdb41ce84f90113d370dbbe5655ffd63297ec3ca6a27bce06007f66",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 13,
+    "label": "reserve-ALO",
+    "source_filename": "codex-clipboard-2a38f121-de05-4ca8-a9f3-0ee912eb9031.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/13-reserve-ALO.png",
+    "report_asset": "report/assets/13-reserve-ALO.png",
+    "sha256": "6a1c10bd1cf83f1d608cda91de47cae7ede63b42865c7aa9ef163926fc432381",
+    "pixels": [
+      1395,
+      446
+    ]
+  },
+  {
+    "supplied_image": 14,
+    "label": "server-reserve-AMO",
+    "source_filename": "codex-clipboard-3bdb4645-5b0d-4d9a-9760-69995542d7a3.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/14-server-reserve-AMO.jpg",
+    "report_asset": "report/assets/14-server-reserve-AMO.jpg",
+    "sha256": "bcce6bb9520b77a2b604106e6b0982842278dd9f35d8133c34bc5c8c73eab856",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 15,
+    "label": "reserve-AMO",
+    "source_filename": "codex-clipboard-8afdf046-7a87-4186-9f8a-75f9843b44a1.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/15-reserve-AMO.png",
+    "report_asset": "report/assets/15-reserve-AMO.png",
+    "sha256": "e782c09e1ce0d9147004fade8f3f08155b33853c5aa4ccee49f022fcfe1d3274",
+    "pixels": [
+      1398,
+      449
+    ]
+  },
+  {
+    "supplied_image": 16,
+    "label": "increase-ALO",
+    "source_filename": "codex-clipboard-3ec22f46-0203-4b6c-b211-90a0676c4022.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/16-increase-ALO.png",
+    "report_asset": "report/assets/16-increase-ALO.png",
+    "sha256": "2b45ac0abd6f9effc56847b49690e18f5ff5205ff48f1a05757f841b248c98df",
+    "pixels": [
+      1408,
+      441
+    ]
+  },
+  {
+    "supplied_image": 17,
+    "label": "server-increase-ALO",
+    "source_filename": "codex-clipboard-68e9ec74-10d9-4a75-99c8-4c136ed15d32.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/17-server-increase-ALO.jpg",
+    "report_asset": null,
+    "sha256": "f766b32d72454b2defec01365d3a700918112389cfe06390348730d39b2b7396",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 18,
+    "label": "increase-AMO",
+    "source_filename": "codex-clipboard-7f084f0c-87e5-44a4-bd4a-8f149e5f100e.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/18-increase-AMO.png",
+    "report_asset": "report/assets/18-increase-AMO.png",
+    "sha256": "f916cbb830796d3fce983a9f9ac676276f5bd88dc5a9487f51726838f42edafa",
+    "pixels": [
+      1404,
+      435
+    ]
+  },
+  {
+    "supplied_image": 19,
+    "label": "server-increase-AMO",
+    "source_filename": "codex-clipboard-a3700d28-db25-43fb-9d5e-b3ccd87d45d7.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/19-server-increase-AMO.png",
+    "report_asset": null,
+    "sha256": "0d54e8903c146ac3130b5ff4842eff3517162b43480a26c6d24e7b3d58d7fb69",
+    "pixels": [
+      3024,
+      1964
+    ]
+  },
+  {
+    "supplied_image": 20,
+    "label": "set-ALO",
+    "source_filename": "codex-clipboard-1e6668fb-4e97-4f1b-b822-e4bda4f985e9.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/20-set-ALO.png",
+    "report_asset": "report/assets/20-set-ALO.png",
+    "sha256": "7edfc49d3a3ba07c516269c145d29e02475a0d31bae526f631cb0feaed53a4d4",
+    "pixels": [
+      1403,
+      446
+    ]
+  },
+  {
+    "supplied_image": 21,
+    "label": "server-set-ALO",
+    "source_filename": "codex-clipboard-018f0b53-676f-4ee1-8571-b1df12a55060.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/21-server-set-ALO.jpg",
+    "report_asset": null,
+    "sha256": "73dc806ff99c2fee92f1dd4b6cf311855f36e6e9e37eeeff0349d21121541a65",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 22,
+    "label": "set-AMO",
+    "source_filename": "codex-clipboard-7b666c50-fd95-467a-bfe1-9452571b3db5.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/22-set-AMO.png",
+    "report_asset": "report/assets/22-set-AMO.png",
+    "sha256": "bcd0804b7680718ff9540df6a7fa3ce666b491fcf038310f2c63000f9aa4f0d2",
+    "pixels": [
+      1388,
+      440
+    ]
+  },
+  {
+    "supplied_image": 23,
+    "label": "server-set-AMO",
+    "source_filename": "codex-clipboard-0ccd25e1-1554-4ce1-b262-f8cfa4040c49.jpg",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/23-server-set-AMO.jpg",
+    "report_asset": null,
+    "sha256": "5e521a9c4d748a2eb5f466fa1923ec426ad885d058314b26926a254cfb6db34c",
+    "pixels": [
+      2880,
+      1870
+    ]
+  },
+  {
+    "supplied_image": 24,
+    "label": "queries-B",
+    "source_filename": "codex-clipboard-3de23d51-9fd8-4be6-94bd-1c33e5797fe7.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/24-queries-B.png",
+    "report_asset": "report/assets/24-queries-B.png",
+    "sha256": "1558204e466be7f50ebdfb68434eb5f8ced8f6faf78640f203112009f832cac8",
+    "pixels": [
+      1467,
+      577
+    ]
+  },
+  {
+    "supplied_image": 25,
+    "label": "single-monitor-B",
+    "source_filename": "codex-clipboard-2bb76428-57e1-4126-80e5-279f1aca94ba.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/25-single-monitor-B.png",
+    "report_asset": "report/assets/25-single-monitor-B.png",
+    "sha256": "2a43abb07b628542f9ca2049af1387c35740db7a86aec875d396b7d1d92a8cf1",
+    "pixels": [
+      1338,
+      202
+    ]
+  },
+  {
+    "supplied_image": 26,
+    "label": "final-state-B",
+    "source_filename": "codex-clipboard-5bba07b0-5a75-47fe-b8de-99d18aee015d.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/26-final-state-B.png",
+    "report_asset": "report/assets/26-final-state-B.png",
+    "sha256": "c8b1b6993772caea45f7a8b44004e322b613cbea29d45f4325d311eef3dfdd37",
+    "pixels": [
+      1319,
+      133
+    ]
+  },
+  {
+    "supplied_image": 27,
+    "label": "dual-monitor-B-repeat",
+    "source_filename": "codex-clipboard-9a27ac47-f513-44ba-8cbb-10f89cd982ba.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/27-dual-monitor-B-repeat.png",
+    "report_asset": null,
+    "sha256": "78d93cd82dedf5d00d1089063fd4ac64f8f2e09e41e7318c120b2943d9414e07",
+    "pixels": [
+      1431,
+      443
+    ]
+  },
+  {
+    "supplied_image": 28,
+    "label": "isolation-monitor-B",
+    "source_filename": "codex-clipboard-e1c1f3b6-3dce-42ed-a929-7c8ce64a68fd.png",
+    "original": "evidence/demo/20261012-submitted-screenshots/originals/28-isolation-monitor-B.png",
+    "report_asset": "report/assets/28-isolation-monitor-B.png",
+    "sha256": "fe4d8632bce3ec894b05e379418c11577206babbe8d3a19260fbf11ca931ee67",
+    "pixels": [
+      1463,
+      426
+    ]
+  }
+]
