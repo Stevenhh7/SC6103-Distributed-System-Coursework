@@ -1,0 +1,761 @@
+{
+  "date": "2026-10-13",
+  "status": "PASSED",
+  "scope": "Read-only audit of original 12 October LAN A server JSON Lines and retained B client JSON Lines. C terminal observations remain original screenshots, not reconstructed raw client logs.",
+  "implementation_baseline": "3241a333b38899ec65fe0ba8e8fcc12001b03967",
+  "run_mapping": [
+    [
+      "basic",
+      "20261012-03-basic-02",
+      "20261012-03-basic-en-01"
+    ],
+    [
+      "dual",
+      "20261012-05-dual-02",
+      "20261012-05-dual-en-01"
+    ],
+    [
+      "isolation",
+      "20261012-06-isolation-01",
+      "20261012-06-isolation-en-01"
+    ]
+  ],
+  "monitors": [
+    {
+      "stage": "basic",
+      "sessionId": "06aa4974-ca5b-43b0-b635-f4fabfb94be8",
+      "requestId": 4,
+      "start": 8384.734,
+      "deadline": 8444.725,
+      "end": 8444.75,
+      "elapsed": 60.01599999999962
+    },
+    {
+      "stage": "dual",
+      "sessionId": "ebecbaba-b8de-47d0-bdba-0b93a75eed40",
+      "requestId": 2,
+      "start": 9121.906,
+      "deadline": 9181.905,
+      "end": 9181.906,
+      "elapsed": 60.0
+    },
+    {
+      "stage": "isolation",
+      "sessionId": "2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9",
+      "requestId": 2,
+      "start": 9479.296,
+      "deadline": 9539.295,
+      "end": 9539.312,
+      "elapsed": 60.01599999999962
+    }
+  ],
+  "basic_post_registration_write_seconds": 152.154684041,
+  "dual_callbacks": [
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 763900253371916,
+      "mode": "AMO",
+      "sessionId": "f019af15-cba3-41ed-b3b1-12136403df21",
+      "requestId": 1,
+      "operation": 4,
+      "peer": "/10.91.33.41:56690",
+      "flightId": 1001,
+      "availableSeats": 9,
+      "sequence": 1,
+      "triggerSessionId": "370abbf3-49ed-4429-a9a7-9ae33abd9223",
+      "triggerRequestId": 1,
+      "encodedHex": "01030004f019af15cba341edb3b112136403df2100000001000002000000000c000003e90000000900000001",
+      "reason": null
+    },
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 763900253686333,
+      "mode": "AMO",
+      "sessionId": "ebecbaba-b8de-47d0-bdba-0b93a75eed40",
+      "requestId": 2,
+      "operation": 4,
+      "peer": "/10.91.162.52:52772",
+      "flightId": 1001,
+      "availableSeats": 9,
+      "sequence": 1,
+      "triggerSessionId": "370abbf3-49ed-4429-a9a7-9ae33abd9223",
+      "triggerRequestId": 1,
+      "encodedHex": "01030004ebecbabab8de47d0bdba0b93a75eed4000000002000002000000000c000003e90000000900000001",
+      "reason": null
+    },
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 763905362588208,
+      "mode": "AMO",
+      "sessionId": "f019af15-cba3-41ed-b3b1-12136403df21",
+      "requestId": 1,
+      "operation": 4,
+      "peer": "/10.91.33.41:56690",
+      "flightId": 1001,
+      "availableSeats": 8,
+      "sequence": 2,
+      "triggerSessionId": "370abbf3-49ed-4429-a9a7-9ae33abd9223",
+      "triggerRequestId": 2,
+      "encodedHex": "01030004f019af15cba341edb3b112136403df2100000001000002000000000c000003e90000000800000002",
+      "reason": null
+    },
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 763905362890083,
+      "mode": "AMO",
+      "sessionId": "ebecbaba-b8de-47d0-bdba-0b93a75eed40",
+      "requestId": 2,
+      "operation": 4,
+      "peer": "/10.91.162.52:52772",
+      "flightId": 1001,
+      "availableSeats": 8,
+      "sequence": 2,
+      "triggerSessionId": "370abbf3-49ed-4429-a9a7-9ae33abd9223",
+      "triggerRequestId": 2,
+      "encodedHex": "01030004ebecbabab8de47d0bdba0b93a75eed4000000002000002000000000c000003e90000000800000002",
+      "reason": null
+    }
+  ],
+  "isolation_callbacks": [
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 764257315182541,
+      "mode": "AMO",
+      "sessionId": "2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9",
+      "requestId": 2,
+      "operation": 4,
+      "peer": "/10.91.162.52:58119",
+      "flightId": 1001,
+      "availableSeats": 9,
+      "sequence": 1,
+      "triggerSessionId": "e0354c3f-fc66-4455-a485-b6382c68e90c",
+      "triggerRequestId": 1,
+      "encodedHex": "010300042ce9ff0b55f94f7e8f9e26c717a946c900000002000002000000000c000003e90000000900000001",
+      "reason": null
+    },
+    {
+      "event": "CALLBACK_SENT",
+      "nanoTime": 764261824010166,
+      "mode": "AMO",
+      "sessionId": "4d1cebe1-a338-41f5-b74a-d9f2b5f5e6b7",
+      "requestId": 2,
+      "operation": 4,
+      "peer": "/10.91.33.41:53423",
+      "flightId": 1002,
+      "availableSeats": 19,
+      "sequence": 1,
+      "triggerSessionId": "e0354c3f-fc66-4455-a485-b6382c68e90c",
+      "triggerRequestId": 2,
+      "encodedHex": "010300044d1cebe1a33841f5b74ad9f2b5f5e6b700000002000002000000000c000003ea0000001300000001",
+      "reason": null
+    }
+  ],
+  "fault_runs": [
+    {
+      "case": "reserve",
+      "mode": "alo",
+      "server_run": "20261012-07-reserve-alo-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 3,
+      "received": 2,
+      "executions": 2,
+      "cache_hits": 0,
+      "dropped_replies": 1,
+      "final_seats": 8,
+      "final_fare": 100
+    },
+    {
+      "case": "reserve",
+      "mode": "amo",
+      "server_run": "20261012-07-reserve-amo-en-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 3,
+      "received": 2,
+      "executions": 1,
+      "cache_hits": 1,
+      "dropped_replies": 1,
+      "final_seats": 9,
+      "final_fare": 100
+    },
+    {
+      "case": "increase",
+      "mode": "alo",
+      "server_run": "20261012-07-increase-alo-en-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 6,
+      "received": 2,
+      "executions": 2,
+      "cache_hits": 0,
+      "dropped_replies": 1,
+      "final_seats": 10,
+      "final_fare": 140
+    },
+    {
+      "case": "increase",
+      "mode": "amo",
+      "server_run": "20261012-07-increase-amo-en-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 6,
+      "received": 2,
+      "executions": 1,
+      "cache_hits": 1,
+      "dropped_replies": 1,
+      "final_seats": 10,
+      "final_fare": 120
+    },
+    {
+      "case": "set",
+      "mode": "alo",
+      "server_run": "20261012-07-set-alo-en-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 5,
+      "received": 2,
+      "executions": 2,
+      "cache_hits": 0,
+      "dropped_replies": 1,
+      "final_seats": 10,
+      "final_fare": 120
+    },
+    {
+      "case": "set",
+      "mode": "amo",
+      "server_run": "20261012-07-set-amo-en-01",
+      "sessionId": "11111111-1111-4111-8111-111111111111",
+      "requestId": 2,
+      "operation": 5,
+      "received": 2,
+      "executions": 1,
+      "cache_hits": 1,
+      "dropped_replies": 1,
+      "final_seats": 10,
+      "final_fare": 120
+    }
+  ],
+  "checks": [
+    {
+      "check": "20261012-03-basic-02 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-03-basic-02 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 3)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 3)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 4)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B request matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 5)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('70a2252f-c500-42c8-b4f3-671fea0302d9', 3)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 3)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 4)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B reply matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 5)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic B callback matches A ('06aa4974-ca5b-43b0-b635-f4fabfb94be8', 4)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic monitor natural end",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-05-dual-02 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-05-dual-02 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B request matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B request matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B reply matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B reply matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B callback matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual B callback matches A ('ebecbaba-b8de-47d0-bdba-0b93a75eed40', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual monitor natural end",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-06-isolation-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-06-isolation-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation B request matches A ('2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation B request matches A ('2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation B reply matches A ('2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9', 1)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation B reply matches A ('2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation B callback matches A ('2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9', 2)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation monitor natural end",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic exactly one callback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic post-expiry reservation after 60 seconds",
+      "passed": true,
+      "detail": 152.154684041
+    },
+    {
+      "check": "basic post-expiry reply 8 seats",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "basic no callback for post-expiry write",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual four callbacks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual two recipient computers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual sequence 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "dual sequence 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "isolation exact flight/registration/recipient/seat/sequence pairs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-alo-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 history saved before loss and cache replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-reserve-amo-en-01 exact cached reply bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-alo-en-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 history saved before loss and cache replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-increase-amo-en-01 exact cached reply bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-alo-en-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 no send failures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 exact target counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 stable request bytes and peer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 expected operation/mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 clean seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 final state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 history saved before loss and cache replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "20261012-07-set-amo-en-01 exact cached reply bytes",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "input_files": {
+    "evidence/demo/20261012-03-basic-02/server.jsonl": {
+      "sha256": "6ff625c9eede5fdc260fe678336dead77026a9b98290bd823b46f5534904adc1",
+      "bytes": 26515
+    },
+    "evidence/demo/20261012-03-basic-en-01/client-B.jsonl": {
+      "sha256": "56f808e2e9f00fe4bfb9edd05d62cc2f84f6c7939a0baa33152c85f0eeda4f8a",
+      "bytes": 7772
+    },
+    "evidence/demo/20261012-05-dual-02/server.jsonl": {
+      "sha256": "61757e428035a9111b66eb8ea4097ce321f8421705939c76c72ecdb629ba643f",
+      "bytes": 7312
+    },
+    "evidence/demo/20261012-05-dual-en-01/client-B.jsonl": {
+      "sha256": "8395cf1bb449a7b7f06eeb97484e4e48780497658ed3234735de678a15a2017d",
+      "bytes": 2748
+    },
+    "evidence/demo/20261012-06-isolation-01/server.jsonl": {
+      "sha256": "8ac73d137c6c345ed43eb06e985f62a4aadae3ae07a39120b173993820001e2f",
+      "bytes": 7647
+    },
+    "evidence/demo/20261012-06-isolation-en-01/client-B.jsonl": {
+      "sha256": "94ebb8f66e831a59e325734a1946cad08073352a2622ccad42014292a056644a",
+      "bytes": 2520
+    },
+    "evidence/demo/20261012-07-reserve-alo-01/server.jsonl": {
+      "sha256": "2a31a22bb1a7af4942764dfdd133d428597075bc10f152bd7344abb04ac5fe1b",
+      "bytes": 3863
+    },
+    "evidence/demo/20261012-07-reserve-amo-en-01/server.jsonl": {
+      "sha256": "2c8d88952ff4ce2ecdcc839efafd101ae57b44436687c6c2878615466dd56de0",
+      "bytes": 4291
+    },
+    "evidence/demo/20261012-07-increase-alo-en-01/server.jsonl": {
+      "sha256": "7c672aaccd4bc8d5fd3e899ee5874728b814e78ce38e350075891ef71543423d",
+      "bytes": 3852
+    },
+    "evidence/demo/20261012-07-increase-amo-en-01/server.jsonl": {
+      "sha256": "20311734b0233f735ebb2040172651609faa13cf0d6c8ccd1790a8e6f86e8f26",
+      "bytes": 4286
+    },
+    "evidence/demo/20261012-07-set-alo-en-01/server.jsonl": {
+      "sha256": "be67d67d5e5bd532d719bcc5c3376f663306b5e41478c1e62282b4a3d54ce742",
+      "bytes": 3850
+    },
+    "evidence/demo/20261012-07-set-amo-en-01/server.jsonl": {
+      "sha256": "85012c16bd15ed6191a22aaa68de8479eba3ec1d3db37be6982877dd4589ee9b",
+      "bytes": 4285
+    }
+  }
+}

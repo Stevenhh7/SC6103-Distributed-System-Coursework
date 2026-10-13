@@ -1,18 +1,27 @@
 {
-  "status": "FINAL_REPORT_CHECKED",
+  "status": "FINAL_REPORT_CHECKED_20261013",
   "pages": 23,
-  "bytes": 2552177,
-  "pdf_sha256": "1869ef8c71b2dea2449293bc9eff096e14b523c293941bb7c1b3a86b048c5b7c",
-  "source_sha256": "78da1b07d2350e6d70721eacd8ca8eaa71d103fe1d767eb809fd7fb5bb37ff29",
+  "bytes": 2554735,
+  "pdf_sha256": "e3a1bb7c011014adbdb44708c4e6f4ff9844bbb1ababd559e64ceeb6879baab3",
+  "source_sha256": "e2f82a1bb21e712864775c8c9f95f5e4626ba948b4a2ae7d422bc3e652f071a5",
   "archived_screenshots": 28,
   "unique_original_hashes": 27,
   "selected_screenshots": 18,
   "figure_groups": 11,
   "contribution": {
-    "Zhang Zhiyin": 33,
-    "Peng Jinyu": 34,
-    "Ji Chengyu": 33,
-    "total": 100
+    "Zhang Zhiyin": 33.33,
+    "Peng Jinyu": 33.33,
+    "Ji Chengyu": 33.33,
+    "display_total": 99.99,
+    "exact_total": 100,
+    "note": "Equal one-third shares, rounded to two decimal places."
+  },
+  "demo": {
+    "slot": 11,
+    "date": "2026-10-17",
+    "time": "14:15-14:30",
+    "venue": "LT8",
+    "timezone": "Asia/Singapore"
   },
   "text_overflow": [],
   "outlines": [
@@ -57,184 +66,140 @@
     {
       "page": 1,
       "orientation": "portrait",
-      "characters": 1562,
+      "characters": 1805,
       "embedded_images": 0
     },
     {
       "page": 2,
       "orientation": "portrait",
-      "characters": 1059,
+      "characters": 1367,
       "embedded_images": 0
     },
     {
       "page": 3,
       "orientation": "portrait",
-      "characters": 1846,
+      "characters": 1851,
       "embedded_images": 0
     },
     {
       "page": 4,
       "orientation": "portrait",
-      "characters": 2257,
+      "characters": 2262,
       "embedded_images": 0
     },
     {
       "page": 5,
       "orientation": "portrait",
-      "characters": 2762,
+      "characters": 2767,
       "embedded_images": 0
     },
     {
       "page": 6,
       "orientation": "landscape",
-      "characters": 535,
+      "characters": 540,
       "embedded_images": 1
     },
     {
       "page": 7,
       "orientation": "landscape",
-      "characters": 557,
+      "characters": 562,
       "embedded_images": 2
     },
     {
       "page": 8,
       "orientation": "landscape",
-      "characters": 405,
+      "characters": 410,
       "embedded_images": 1
     },
     {
       "page": 9,
       "orientation": "portrait",
-      "characters": 2211,
+      "characters": 2216,
       "embedded_images": 0
     },
     {
       "page": 10,
       "orientation": "portrait",
-      "characters": 4004,
+      "characters": 4167,
       "embedded_images": 0
     },
     {
       "page": 11,
       "orientation": "landscape",
-      "characters": 630,
+      "characters": 635,
       "embedded_images": 2
     },
     {
       "page": 12,
       "orientation": "landscape",
-      "characters": 633,
+      "characters": 638,
       "embedded_images": 2
     },
     {
       "page": 13,
       "orientation": "landscape",
-      "characters": 877,
+      "characters": 882,
       "embedded_images": 1
     },
     {
       "page": 14,
       "orientation": "landscape",
-      "characters": 617,
+      "characters": 622,
       "embedded_images": 2
     },
     {
       "page": 15,
       "orientation": "portrait",
-      "characters": 1921,
+      "characters": 2337,
       "embedded_images": 0
     },
     {
       "page": 16,
       "orientation": "landscape",
-      "characters": 538,
+      "characters": 543,
       "embedded_images": 2
     },
     {
       "page": 17,
       "orientation": "landscape",
-      "characters": 514,
+      "characters": 519,
       "embedded_images": 2
     },
     {
       "page": 18,
       "orientation": "landscape",
-      "characters": 502,
+      "characters": 507,
       "embedded_images": 2
     },
     {
       "page": 19,
       "orientation": "landscape",
-      "characters": 700,
+      "characters": 705,
       "embedded_images": 1
     },
     {
       "page": 20,
       "orientation": "portrait",
-      "characters": 1999,
+      "characters": 2088,
       "embedded_images": 0
     },
     {
       "page": 21,
       "orientation": "portrait",
-      "characters": 2264,
+      "characters": 2060,
       "embedded_images": 0
     },
     {
       "page": 22,
       "orientation": "portrait",
-      "characters": 2896,
+      "characters": 3254,
       "embedded_images": 0
     },
     {
       "page": 23,
       "orientation": "portrait",
-      "characters": 1973,
+      "characters": 2520,
       "embedded_images": 0
     }
-  ],
-  "monitor_log_checks": [
-    {
-      "run": "20261012-03-basic-en-01",
-      "session": "06aa4974-ca5b-43b0-b635-f4fabfb94be8",
-      "elapsed": 60.016,
-      "callbacks": [
-        {
-          "flightId": 1001,
-          "availableSeats": 9,
-          "sequence": 1
-        }
-      ]
-    },
-    {
-      "run": "20261012-05-dual-en-01",
-      "session": "ebecbaba-b8de-47d0-bdba-0b93a75eed40",
-      "elapsed": 60.0,
-      "callbacks": [
-        {
-          "flightId": 1001,
-          "availableSeats": 9,
-          "sequence": 1
-        },
-        {
-          "flightId": 1001,
-          "availableSeats": 8,
-          "sequence": 2
-        }
-      ]
-    },
-    {
-      "run": "20261012-06-isolation-en-01",
-      "session": "2ce9ff0b-55f9-4f7e-8f9e-26c717a946c9",
-      "elapsed": 60.016,
-      "callbacks": [
-        {
-          "flightId": 1001,
-          "availableSeats": 9,
-          "sequence": 1
-        }
-      ]
-    }
-  ],
-  "scope": "Existing automated results and supplied LAN evidence; no program suite rerun or formal course submission"
+  ]
 }

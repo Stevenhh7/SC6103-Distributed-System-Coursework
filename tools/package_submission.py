@@ -17,8 +17,13 @@ def main():
     if output.is_relative_to(ROOT):parser.error('Choose an output outside the project to avoid recursive packaging.')
     output.parent.mkdir(parents=True,exist_ok=True)
     excluded={'.git','__pycache__','.pytest_cache','.venv','node_modules','work','.DS_Store','PACKAGE_MANIFEST.json'}
+    # Published source ZIPs/checksums must not be recursively packaged. Keep
+    # superseded rehearsal evidence on disk, outside the final submission archive.
+    superseded=[p.parent for p in ROOT.glob('evidence/demo/*/SUPERSEDED.md')]
     files=[p for p in sorted(ROOT.rglob('*')) if p.is_file() and not any(x in excluded for x in p.relative_to(ROOT).parts)
-           and not p.relative_to(ROOT).as_posix().startswith('server/build/') and p.suffix not in ('.pyc','.class','.zip')]
+           and not p.relative_to(ROOT).as_posix().startswith(('server/build/','output/source/'))
+           and not any(p.is_relative_to(folder) for folder in superseded)
+           and p.suffix not in ('.pyc','.class','.zip')]
     manifest={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
     with ZipFile(output,'w',compression=ZIP_DEFLATED) as z:
         for p in files:z.write(p,ROOT.name+'/'+p.relative_to(ROOT).as_posix())

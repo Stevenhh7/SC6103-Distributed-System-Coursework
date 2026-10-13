@@ -1,0 +1,17 @@
+{
+  "case": "baseline",
+  "mode": "alo",
+  "session": "6979a3a3-78a0-4885-92c0-fcea3ef82887",
+  "flight_id": 1001,
+  "result": "PASSED_LOCAL_UDP",
+  "evidence": "../../../../../../../../../Users/zhangzhiyin/study/NTU-BC/TREMISTER1/SC6103/SC6103-Distributed-System-Coursework/evidence/a/submission-audit-20261013/matrix/baseline-alo",
+  "initial_seats": 10,
+  "final_seats": 9,
+  "initial_fare": 100.0,
+  "final_fare": 140.0,
+  "mutation_attempts": "",
+  "client_unknown": false,
+  "notes": "Actual Java/Python loopback UDP; A server logs verified. Not a three-computer result.",
+  "business_executions": "",
+  "cache_hits": ""
+}

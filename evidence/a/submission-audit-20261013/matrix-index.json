@@ -1,0 +1,98 @@
+[
+  {
+    "case": "baseline",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/baseline-alo"
+  },
+  {
+    "case": "baseline",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/baseline-amo"
+  },
+  {
+    "case": "request_loss_reserve",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/request_loss_reserve-alo"
+  },
+  {
+    "case": "request_loss_reserve",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/request_loss_reserve-amo"
+  },
+  {
+    "case": "reply_loss_reserve",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_reserve-alo"
+  },
+  {
+    "case": "reply_loss_reserve",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_reserve-amo"
+  },
+  {
+    "case": "reply_loss_increase",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_increase-alo"
+  },
+  {
+    "case": "reply_loss_increase",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_increase-amo"
+  },
+  {
+    "case": "reply_loss_set",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_set-alo"
+  },
+  {
+    "case": "reply_loss_set",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/reply_loss_set-amo"
+  },
+  {
+    "case": "all_request_loss",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/all_request_loss-alo"
+  },
+  {
+    "case": "all_request_loss",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/all_request_loss-amo"
+  },
+  {
+    "case": "all_reply_loss",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/all_reply_loss-alo"
+  },
+  {
+    "case": "all_reply_loss",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/all_reply_loss-amo"
+  },
+  {
+    "case": "monitor",
+    "mode": "alo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/monitor-alo"
+  },
+  {
+    "case": "monitor",
+    "mode": "amo",
+    "result": "PASSED_LOCAL_UDP",
+    "directory": "matrix/monitor-amo"
+  }
+]

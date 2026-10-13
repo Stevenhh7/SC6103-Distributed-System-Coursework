@@ -1,0 +1,16 @@
+Experiment reply_loss_increase; mode=AMO; session=eefe2492-575f-458f-8b91-0a30486b05b3
+Restart the server before each case to reset its state. The results below are observed results; review A's server logs for business execution counts.
+Write fault target: eefe2492-575f-458f-8b91-0a30486b05b3:2
+
+[before]
+Request eefe2492-575f-458f-8b91-0a30486b05b3:1; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 10
+
+[mutation]
+Request eefe2492-575f-458f-8b91-0a30486b05b3:2; attempts: 2
+Airfare updated: flight 1001, total airfare: 120.00 SGD
+
+[after (read-only)]
+Request eefe2492-575f-458f-8b91-0a30486b05b3:3; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 120.00 SGD; available seats 10
+Case calls finished. Verify ALO/AMO business execution counts, dual monitors, and flight isolation using the experiment steps.

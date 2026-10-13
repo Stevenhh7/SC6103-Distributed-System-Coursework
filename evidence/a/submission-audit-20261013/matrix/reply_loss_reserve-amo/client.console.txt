@@ -1,0 +1,16 @@
+Experiment reply_loss_reserve; mode=AMO; session=34a7f3bc-4692-4825-90c7-941c5aef0fda
+Restart the server before each case to reset its state. The results below are observed results; review A's server logs for business execution counts.
+Write fault target: 34a7f3bc-4692-4825-90c7-941c5aef0fda:2
+
+[before]
+Request 34a7f3bc-4692-4825-90c7-941c5aef0fda:1; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 10
+
+[mutation]
+Request 34a7f3bc-4692-4825-90c7-941c5aef0fda:2; attempts: 2
+Reservation successful: flight 1001, available seats after this execution: 9
+
+[after (read-only)]
+Request 34a7f3bc-4692-4825-90c7-941c5aef0fda:3; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 9
+Case calls finished. Verify ALO/AMO business execution counts, dual monitors, and flight isolation using the experiment steps.

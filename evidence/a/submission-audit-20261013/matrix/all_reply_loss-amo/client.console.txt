@@ -1,0 +1,16 @@
+Experiment reply_loss_reserve; mode=AMO; session=05c91da1-a2fb-43df-8d93-a03c8ad70bae
+Restart the server before each case to reset its state. The results below are observed results; review A's server logs for business execution counts.
+Write fault target: 05c91da1-a2fb-43df-8d93-a03c8ad70bae:2
+
+[before]
+Request 05c91da1-a2fb-43df-8d93-a03c8ad70bae:1; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 10
+
+[mutation]
+Request 05c91da1-a2fb-43df-8d93-a03c8ad70bae:2; attempts: 5
+No confirmation received; execution result is unknown. For a reservation or fare change, query the current state before deciding whether to submit a new operation.
+
+[after (read-only)]
+Request 05c91da1-a2fb-43df-8d93-a03c8ad70bae:3; attempts: 1
+Departure 2026-10-17 09:30 UTC+8; airfare 100.00 SGD; available seats 9
+Client stopped: Case contains errors or unknown results; preserve the logs and compare the server state.. Sent but unconfirmed operations may have an unknown result.

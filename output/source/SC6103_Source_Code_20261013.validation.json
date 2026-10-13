@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "archive": "SC6103_Source_Code_20261013.zip",
+  "bytes": 11860293,
+  "files": 1191,
+  "sha256": "209543f91e48fa47c9e0bea6a6412a82b22156fdea72e17dcdcda971bae0343d",
+  "all_manifest_hashes_verified": true,
+  "all_tested_program_sources_identical": 95,
+  "fresh_compile": true,
+  "actual_java17_server_help": true,
+  "client_help": true,
+  "lan_audit_from_archive": true
+}

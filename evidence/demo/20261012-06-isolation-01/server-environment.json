@@ -1,0 +1,29 @@
+{
+  "started": "2026-10-12T20:59:23.319568+08:00",
+  "member": "Zhang Zhiyin",
+  "role": "A/server",
+  "run_id": "20261012-06-isolation-01",
+  "mode": "amo",
+  "commit": "3241a333b38899ec65fe0ba8e8fcc12001b03967",
+  "server_ipv4": "10.91.127.7",
+  "port": 6789,
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "java": "java version \"21.0.5\" 2024-10-15 LTS\nJava(TM) SE Runtime Environment (build 21.0.5+9-LTS-239)\nJava HotSpot(TM) 64-Bit Server VM (build 21.0.5+9-LTS-239, mixed mode, sharing)\n",
+  "command": [
+    "java",
+    "-Dfile.encoding=UTF-8",
+    "-cp",
+    "server/build/classes",
+    "flight.ServerMain",
+    "--bind",
+    "0.0.0.0",
+    "--port",
+    "6789",
+    "--semantics",
+    "amo"
+  ],
+  "status": "STOPPED; test results require client/server evidence review",
+  "pid": 82050,
+  "exit_code": 143,
+  "ended": "2026-10-12T21:08:34.496451+08:00"
+}

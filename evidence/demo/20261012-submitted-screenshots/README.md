@@ -6,7 +6,7 @@ Selected report assets are exact copies. PDF viewports only frame original pixel
 
 Observed source relationships:
 - Basic B: 06aa4974-ca5b-43b0-b635-f4fabfb94be8; monitor request 4.
-- Basic C: 1e4fa4b2-d38b-42cf-8c0a-428986eaae4e; reservations 8 and 13.
+- Basic C: 1e4fa4b2-d38b-42cf-8c0a-428986eaea4e; reservations 8 and 13.
 - Dual B: ebecbaba-b8de-47d0-bdba-0b93a75eed40:2.
 - Dual C: f019af15-cba3-41ed-b3b1-12136403df21:1.
 - Dual writer: 370abbf3-49ed-4429-a9a7-9ae33abd9223, requests 1 and 2.
@@ -17,9 +17,11 @@ Observed source relationships:
 
 Screenshot 27 is identical to 07. Screenshot 11 repeats dual server transactions,
 not isolation. Server dual-02 and client dual-en-01 paths refer to matching UUIDs.
-No matching isolation server capture was supplied; the report limits that LAN
-claim to client-side observations and uses existing integration evidence for
-server-boundary coverage. Raw A/C JSON files are not reconstructed from images.
+On 13 October, the audit added the original A JSON Lines retained on the server,
+including the isolation log with two correct per-flight recipients. See
+../audit-20261013/lan-audit.json for file hashes and 94 passed evidence checks.
+A JSON Lines are original process output; raw C client logs are not reconstructed from images.
 
-Contribution update confirmed on 13 October: Zhang Zhiyin (A) 33%, Peng Jinyu (B) 34%, Ji Chengyu (C) 33%; total 100%.
+Contribution update on 13 October: each member has an equal one-third share, displayed as 33.33%. The displayed sum is 99.99% due only to rounding; exact shares total 100%.
+Demo booking: slot 11, 17 October 2026, 14:15-14:30, LT8; team confirmed.
 Classroom demonstration on 17 October is separate from this 12 October rehearsal.
